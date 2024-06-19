@@ -1,0 +1,22 @@
+employees:
+  - id: 1
+    name: John Doe
+    job: Developer
+    skills:
+      - JavaScript
+      - Python
+      - C++
+  - id: 2
+    name: Jane Doe
+    job: Designer
+    skills:
+      - Photoshop
+      - Illustrator
+      - InDesign
+projects:
+  - id: 101
+    name: Project Alpha
+    description: This is the first project.
+  - id: 102
+    name: Project Beta
+    description: This is the second project.

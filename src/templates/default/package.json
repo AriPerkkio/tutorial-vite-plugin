@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --config vite.config.internal.ts",
+    "build": "vite --config vite.config.internal.ts build",
+    "preview": "vite --config vite.config.internal.ts preview"
   },
   "devDependencies": {
     "vite": "^5.2.0"

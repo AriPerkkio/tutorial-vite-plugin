@@ -23,8 +23,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -98,4 +96,13 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+pre {
+  text-align: left;
+  min-width: 50vw;
+  margin: 0 auto;
+  border: 1px dashed white;
+  border-radius: 5px;
+  padding: 16px;
 }

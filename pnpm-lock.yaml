@@ -58,6 +58,9 @@ devDependencies:
   unocss:
     specifier: ^0.59.4
     version: 0.59.4(postcss@8.4.38)(vite@5.3.1)
+  vite:
+    specifier: ^5.2.0
+    version: 5.3.1(@types/node@20.14.5)
 
 packages:
 

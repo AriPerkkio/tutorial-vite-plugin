@@ -1,4 +1,4 @@
 ---
 type: part
-title: Basics
+title: Vite Plugin
 ---
