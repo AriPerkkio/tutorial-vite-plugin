@@ -5,6 +5,7 @@ const ID = "vite-plugin-content";
 document.querySelector("#app").innerHTML = `
   <div>
     <h1>Hello Vite Plugin tutorial!</h1>
+    <p>Loaded Vite plugins: ${window.TUTORIAL_LOADED_VITE_PLUGINS || "none"}</p>
     <pre id="${ID}"></pre>
   </div>
 `;
@@ -18,6 +19,8 @@ import("./index.js")
     );
   })
   .catch((error) => {
-    const message = `Failed to load index.js: "${error instanceof Error ? error.message : String(error)}"`;
-    document.getElementById(ID).textContent = message;
+    const element = document.getElementById(ID);
+    const message = `Failed to load index.js: "${error instanceof Error ? error.message : String(error)}" ❌`;
+    element.textContent = message;
+    element.classList.add("error");
   });

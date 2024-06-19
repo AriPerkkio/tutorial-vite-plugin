@@ -28,4 +28,4 @@ const content = ["Initial content"];
 export { content };
 ```
 
-At this point we should run into error when Vite fails to load `.yaml` file.
+At this point we should run into error when Vite fails to load `.yaml` file. ❌

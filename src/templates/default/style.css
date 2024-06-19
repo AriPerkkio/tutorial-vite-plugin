@@ -106,3 +106,11 @@ pre {
   border-radius: 5px;
   padding: 16px;
 }
+
+.error {
+  font-weight: 600;
+  color: red;
+  background-color: white;
+  border: 2px dashed red;
+  outline: 2px dashed red;
+}

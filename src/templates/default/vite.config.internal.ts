@@ -1,10 +1,27 @@
-import { defineConfig, mergeConfig } from "vite";
+import {
+  defineConfig,
+  mergeConfig,
+  type Plugin,
+  type PluginOption,
+} from "vite";
 
 import viteConfig from "./vite.config";
 
+const loadedPlugins = viteConfig.plugins?.map(getName).filter(Boolean).join();
+
 export default mergeConfig(
   defineConfig({
-    // More options here?
+    define: {
+      TUTORIAL_LOADED_VITE_PLUGINS: `"${loadedPlugins || "none"}"`,
+    },
   }),
   viteConfig
 );
+
+function getName(plugin: PluginOption) {
+  if (plugin && "name" in plugin && plugin.name.length > 0) {
+    return `${plugin.name} ✅`;
+  }
+
+  return null;
+}

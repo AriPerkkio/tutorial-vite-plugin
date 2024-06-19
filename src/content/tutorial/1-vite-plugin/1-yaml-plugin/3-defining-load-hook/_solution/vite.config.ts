@@ -7,7 +7,7 @@ export default defineConfig({
       load(id, options) {
         if (id.endsWith(".yaml")) {
           return {
-            code: `export default 'Loaded ${id}';`,
+            code: `export default "Trying to load '${id}' file.";`,
           };
         }
       },
