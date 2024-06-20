@@ -6,7 +6,7 @@ focus: /vite.config.ts
 
 # Defining load hook
 
-Let's start by adding a [`load`](https://rollupjs.org/plugin-development/#load) hook in our Vite plugin.
+Next we'll need to intercept loading of `.yaml` files. Let's start by adding a [`load`](https://rollupjs.org/plugin-development/#load) hook in our Vite plugin.
 
 ```js
 {
@@ -16,14 +16,14 @@ Let's start by adding a [`load`](https://rollupjs.org/plugin-development/#load) 
 }
 ```
 
-Vite will call this hook with all loaded files. As our plugin is only interested in `.yaml` files, we can check `id` for this extension.
+Vite will call this hook with all the loaded files. As our plugin is only interested in `.yaml` files, we can check `id` for this extension.
 
 ```js
 {
   name: "yaml-plugin",
   load(id, options) {
     if(id.endsWith('.yaml')) {
-      // YAML related logic comes here
+      // id === "/home/tutorial/content.yaml"
     }
   }
 }

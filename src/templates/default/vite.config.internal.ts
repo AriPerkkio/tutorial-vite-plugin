@@ -1,9 +1,4 @@
-import {
-  defineConfig,
-  mergeConfig,
-  type Plugin,
-  type PluginOption,
-} from "vite";
+import { defineConfig, mergeConfig, type PluginOption } from "vite";
 
 import viteConfig from "./vite.config";
 
