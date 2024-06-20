@@ -1,0 +1,1 @@
+{"/index.js":"import content from \"./content.yaml\";\n\nexport { content };\n"}

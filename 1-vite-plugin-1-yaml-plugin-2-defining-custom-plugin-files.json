@@ -1,0 +1,1 @@
+{"/index.js":"import content from \"./content.yaml\";\n\nexport { content };\n","/vite.config.ts":"import { defineConfig } from \"vite\";\n\nexport default defineConfig({\n\n});\n"}
