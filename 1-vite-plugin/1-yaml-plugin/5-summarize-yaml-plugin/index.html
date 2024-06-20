@@ -21,12 +21,14 @@
     <meta name="astro-view-transitions-fallback" content="animate" />
     <link
       rel="stylesheet"
-      href="/tutorial-vite-plugin/_astro/_slug_.BUdHHpJb.css"
+      href="/tutorial-vite-plugin/_astro/_slug_.D6PLUHD0.css"
     />
     <link
       rel="stylesheet"
       href="/tutorial-vite-plugin/_astro/_slug_.BkaZf5Pl.css"
     />
+    <script src="/tutorial-vite-plugin/coi-serviceworker.js"></script>
+
     <script
       type="module"
       src="/tutorial-vite-plugin/_astro/hoisted.DVu4Hrmu.js"
@@ -386,7 +388,7 @@
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"
+                    "/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"
                     ><span class="i-ph-arrow-left scale-120"></span
                   ></a>
                   <div class="relative">
@@ -430,12 +432,54 @@
                     <code>*.yaml</code> file imports and convert them into
                     Javascript.
                   </p>
+                  <div
+                    class="mt-6 p-3 border-1 border-current border-dashed border-rd-md"
+                  >
+                    <div class="mb-3">Source code loads YAML-file:</div>
+                    <code>import content from "./some-file.yaml"</code>
+                  </div>
+                  <div class="mt-6 w-full text-center">⬇️</div>
+                  <div
+                    class="mt-6 p-3 border-1 border-current border-dashed border-rd-md"
+                  >
+                    Vite plugin's <code>load()</code> hook intercepts
+                    <code>.yaml</code> request
+                  </div>
+                  <div class="mt-6 w-full text-center">⬇️</div>
+                  <div
+                    class="mt-6 p-3 border-1 border-current border-dashed border-rd-md"
+                  >
+                    Contents of requested file are read from file system using
+                    <code>readFileSync()</code> from <code>node:fs</code> module
+                  </div>
+                  <div class="mt-6 w-full text-center">⬇️</div>
+                  <div
+                    class="mt-6 p-3 border-1 border-current border-dashed border-rd-md"
+                  >
+                    YAML content is converted into Javascript using
+                    <code>parse()</code> from <code>yaml</code> module
+                  </div>
+                  <div class="mt-6 w-full text-center">⬇️</div>
+                  <div
+                    class="mt-6 p-3 border-1 border-current border-dashed border-rd-md"
+                  >
+                    Javascript object is serialized into text using
+                    <code>JSON.stringify()</code> and returned as default export
+                    from <code>load()</code> hook
+                  </div>
+                  <div class="mt-6 w-full text-center">⬇️</div>
+                  <div
+                    class="mt-6 p-3 border-1 border-current border-dashed border-rd-md"
+                  >
+                    Source code successfully loads Javascript object from
+                    <code>.yaml</code> file import ✅
+                  </div>
                 </div>
                 <div class="grid grid-cols-[1fr_1fr] gap-4 mt-8">
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"
+                      "/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-left pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"

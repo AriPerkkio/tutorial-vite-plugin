@@ -21,12 +21,14 @@
     <meta name="astro-view-transitions-fallback" content="animate" />
     <link
       rel="stylesheet"
-      href="/tutorial-vite-plugin/_astro/_slug_.BUdHHpJb.css"
+      href="/tutorial-vite-plugin/_astro/_slug_.D6PLUHD0.css"
     />
     <link
       rel="stylesheet"
       href="/tutorial-vite-plugin/_astro/_slug_.BkaZf5Pl.css"
     />
+    <script src="/tutorial-vite-plugin/coi-serviceworker.js"></script>
+
     <script
       type="module"
       src="/tutorial-vite-plugin/_astro/hoisted.DVu4Hrmu.js"
@@ -386,7 +388,7 @@
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
+                    "/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
                     ><span class="i-ph-arrow-left scale-120"></span
                   ></a>
                   <div class="relative">
@@ -417,7 +419,7 @@
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"
+                    "/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"
                     ><span class="i-ph-arrow-right scale-120"></span
                   ></a>
                 </header>
@@ -435,7 +437,7 @@
                     pass the output from <code>load</code> hook.
                   </p>
                   <p>
-                    To get the content of loaded file we’ll need to use
+                    To get the content of requested file we’ll need to use
                     <a
                       href="https://nodejs.org/api/fs.html#fsreadfilesyncpath-options"
                       ><code>readFileSync</code></a
@@ -462,12 +464,12 @@
                       <pre
                         data-language="ts"
                       ><code><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">import</span><span style="--0:#D4D4D4;--1:#000000"> { </span><span style="--0:#9CDCFE;--1:#001080">readFileSync</span><span style="--0:#D4D4D4;--1:#000000"> } </span><span style="--0:#C586C0;--1:#AC00D8">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"node:fs"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">import</span><span style="--0:#D4D4D4;--1:#000000"> { </span><span style="--0:#9CDCFE;--1:#001080">parse</span><span style="--0:#D4D4D4;--1:#000000"> } </span><span style="--0:#C586C0;--1:#AC00D8">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"yaml"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code">
-</div></div><div class="ec-line"><div class="code"><span style="--0:#569CD6;--1:#0000FF">const</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#4FC1FF;--1:#006BB8">content</span><span style="--0:#D4D4D4;--1:#000000"> = </span><span style="--0:#DCDCAA;--1:#795E26">readFileSync</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#CE9178;--1:#A31515">"./content.yaml"</span><span style="--0:#D4D4D4;--1:#000000">, </span><span style="--0:#CE9178;--1:#A31515">"utf8"</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#569CD6;--1:#0000FF">const</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#4FC1FF;--1:#006BB8">yaml</span><span style="--0:#D4D4D4;--1:#000000"> = </span><span style="--0:#DCDCAA;--1:#795E26">parse</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#74A061;--1:#007A00">//    ^^^^ [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]</span></div></div></code></pre>
+</div></div><div class="ec-line"><div class="code"><span style="--0:#569CD6;--1:#0000FF">const</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#4FC1FF;--1:#006BB8">content</span><span style="--0:#D4D4D4;--1:#000000"> = </span><span style="--0:#DCDCAA;--1:#795E26">readFileSync</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#CE9178;--1:#A31515">"./content.yaml"</span><span style="--0:#D4D4D4;--1:#000000">, </span><span style="--0:#CE9178;--1:#A31515">"utf8"</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#569CD6;--1:#0000FF">const</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#4FC1FF;--1:#006BB8">yaml</span><span style="--0:#D4D4D4;--1:#000000"> = </span><span style="--0:#DCDCAA;--1:#795E26">parse</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#74A061;--1:#007A00">//    ^^^^ [{ employees: [{ id: 1, ...}, ...], projects: [{ id: 101, ...}] }]</span></div></div></code></pre>
                       <div class="copy">
                         <button
                           title="Copy to clipboard"
                           data-copied="Copied!"
-                          data-code="import { readFileSync } from &#x22;node:fs&#x22;;import { parse } from &#x22;yaml&#x22;;const content = readFileSync(&#x22;./content.yaml&#x22;, &#x22;utf8&#x22;);const yaml = parse(content);//    ^^^^ [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]"
+                          data-code="import { readFileSync } from &#x22;node:fs&#x22;;import { parse } from &#x22;yaml&#x22;;const content = readFileSync(&#x22;./content.yaml&#x22;, &#x22;utf8&#x22;);const yaml = parse(content);//    ^^^^ [{ employees: [{ id: 1, ...}, ...], projects: [{ id: 101, ...}] }]"
                         >
                           <div></div>
                         </button>
@@ -478,7 +480,11 @@
                     The <code>yaml</code> variable now holds a Javascript object
                     that represents our <code>content.yaml</code> contents. To
                     return this from <code>load</code> hook, we’ll need to
-                    serialize it to string with <code>JSON.stringify</code>:
+                    serialize it to string with
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+                      ><code>JSON.stringify</code></a
+                    >:
                   </p>
                   <div class="expressive-code">
                     <figure class="frame">
@@ -524,7 +530,7 @@
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
+                      "/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-left pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"
@@ -535,7 +541,7 @@
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer text-right items-end"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"
+                      "/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-right pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"

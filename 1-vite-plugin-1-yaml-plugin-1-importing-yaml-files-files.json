@@ -1,4 +1,1 @@
-{
-  "/content.yaml": "employees:\n  - id: 1\n    name: John Doe\n    job: Developer\n    skills:\n      - JavaScript\n      - Python\n      - C++\n  - id: 2\n    name: Jane Doe\n    job: Designer\n    skills:\n      - Photoshop\n      - Illustrator\n      - InDesign\nprojects:\n  - id: 101\n    name: Project Alpha\n    description: This is the first project.\n  - id: 102\n    name: Project Beta\n    description: This is the second project.\n",
-  "/index.js": "const content = [\"Initial content\"];\n\nexport { content };\n"
-}
+{"/content.yaml":"employees:\n  - id: 1\n    name: John Doe\n    job: Developer\n    skills:\n      - JavaScript\n      - Python\n      - C++\n  - id: 2\n    name: Jane Doe\n    job: Designer\n    skills:\n      - Photoshop\n      - Illustrator\n      - InDesign\nprojects:\n  - id: 101\n    name: Project Alpha\n    description: This is the first project.\n  - id: 102\n    name: Project Beta\n    description: This is the second project.\n","/index.js":"const content = [\"Initial content\"];\n\nexport { content };\n"}

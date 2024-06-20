@@ -21,12 +21,13 @@
     <meta name="astro-view-transitions-fallback" content="animate" />
     <link
       rel="stylesheet"
-      href="/tutorial-vite-plugin/_astro/_slug_.BUdHHpJb.css"
+      href="/tutorial-vite-plugin/_astro/_slug_.D6PLUHD0.css"
     />
     <link
       rel="stylesheet"
       href="/tutorial-vite-plugin/_astro/_slug_.BkaZf5Pl.css"
     />
+    <script src="/tutorial-vite-plugin/coi-serviceworker.js"></script>
     <script
       type="module"
       src="/tutorial-vite-plugin/_astro/hoisted.DVu4Hrmu.js"
@@ -35,26 +36,31 @@
       [data-astro-transition-scope="astro-2ejwnqfq-3"] {
         view-transition-name: astro-2ejwnqfq-3;
       }
+
       @layer astro {
         ::view-transition-old(astro-2ejwnqfq-3) {
           animation: none;
           opacity: 0;
           mix-blend-mode: normal;
         }
+
         ::view-transition-new(astro-2ejwnqfq-3) {
           animation: none;
           mix-blend-mode: normal;
         }
+
         ::view-transition-group(astro-2ejwnqfq-3) {
           animation: none;
         }
       }
+
       [data-astro-transition-fallback="old"]
         [data-astro-transition-scope="astro-2ejwnqfq-3"],
       [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2ejwnqfq-3"] {
         animation: none;
         mix-blend-mode: normal;
       }
+
       [data-astro-transition-fallback="new"]
         [data-astro-transition-scope="astro-2ejwnqfq-3"],
       [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2ejwnqfq-3"] {
@@ -63,6 +69,7 @@
       }
     </style>
   </head>
+
   <body class="h-full text-black">
     <div id="previews-container"></div>
     <main
@@ -380,7 +387,8 @@
                 client="load"
                 opts='{"name":"Nav","value":true}'
                 await-children=""
-                ><header
+              >
+                <header
                   class="grid grid-cols-[auto_minmax(0,1fr)_auto] h-[82px] gap-0.5 py-4 px-1 text-sm"
                 >
                   <a
@@ -420,8 +428,8 @@
                     ><span class="i-ph-arrow-right scale-120"></span
                   ></a>
                 </header>
-                <!--astro:end--></astro-island
-              >
+                <!--astro:end-->
+              </astro-island>
               <div class="h-full overflow-auto scrollbar-transparent p-8">
                 <div
                   class="markdown-content text-tk-elements-content-textColor"
@@ -437,8 +445,8 @@
                   </p>
                   <p>
                     Our goal is to be able to import
-                    <code>content.yaml</code> file in the Javascript file and
-                    use it as plain Javascript object.
+                    <code>content.yaml</code> file in a Javascript file and use
+                    it as plain Javascript object.
                   </p>
                   <div class="expressive-code">
                     <link
@@ -521,7 +529,8 @@
                 opts='{"name":"WorkspacePanel","value":true}'
                 data-astro-transition-persist="astro-5n3vchjr-1"
                 await-children=""
-                ><div
+              >
+                <div
                   class=""
                   style="
                     display: flex;
@@ -761,8 +770,8 @@
                     </div>
                   </div>
                 </div>
-                <!--astro:end--></astro-island
-              >
+                <!--astro:end-->
+              </astro-island>
             </div>
           </div>
           <div class="divider" data-astro-cid-xhfupcag></div>
