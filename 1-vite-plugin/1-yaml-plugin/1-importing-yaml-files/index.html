@@ -1,34 +1,773 @@
-<!DOCTYPE html><html lang="en" class="h-full" data-astro-transition-scope="astro-2ejwnqfq-3"> <head><meta charset="UTF-8"><meta name="description" content="TutorialKit"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.10.3"><title>Vite Plugin / YAML Plugin / importing-yaml-files</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><link rel="stylesheet" href="/tutorial-vite-plugin/_astro/_slug_.BUdHHpJb.css">
-<link rel="stylesheet" href="/tutorial-vite-plugin/_astro/_slug_.BkaZf5Pl.css"><script type="module" src="/tutorial-vite-plugin/_astro/hoisted.DVu4Hrmu.js"></script><style>[data-astro-transition-scope="astro-2ejwnqfq-3"] { view-transition-name: astro-2ejwnqfq-3; }@layer astro { ::view-transition-old(astro-2ejwnqfq-3) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-2ejwnqfq-3) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-2ejwnqfq-3) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2ejwnqfq-3"],
-			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2ejwnqfq-3"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2ejwnqfq-3"],
-			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2ejwnqfq-3"] { animation: none; mix-blend-mode: normal; }</style></head> <body class="h-full text-black">  <div id="previews-container"></div> <main class="max-w-full flex flex-col h-screen overflow-hidden" data-swap-root> <nav class="bg-tk-elements-topBar-backgroundColor border-b border-tk-elements-app-borderColor flex max-w-full items-center p-3 px-4 min-h-[56px]"> <div class="flex flex-1"> <a href="#" class="flex items-center text-tk-elements-topBar-logo-color hover:text-tk-elements-topBar-logo-colorHover"> <span class="h-5 w-auto"> <svg width="100%" height="100%" viewBox="0 0 95 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M60.5 14.0002V6.4002H62.6V14.0002H60.5ZM61.6 5.4002C61.3 5.4002 61 5.3002 60.8 5.1002C60.6 4.9002 60.5 4.6002 60.5 4.3002C60.5 4.0002 60.6 3.8002 60.8 3.5002C61 3.3002 61.3 3.2002 61.6 3.2002C61.9 3.2002 62.2 3.3002 62.4 3.5002C62.6 3.7002 62.7 4.0002 62.7 4.3002C62.7 4.6002 62.6 4.8002 62.4 5.1002C62.2 5.3002 61.9 5.4002 61.6 5.4002ZM86.4 14.0002V6.4002H88.5V14.0002H86.4ZM87.5 5.4002C87.2 5.4002 86.9 5.3002 86.7 5.1002C86.5 4.9002 86.4 4.6002 86.4 4.3002C86.4 4.0002 86.5 3.8002 86.7 3.5002C86.9 3.3002 87.2 3.2002 87.5 3.2002C87.8 3.2002 88.1 3.3002 88.3 3.5002C88.5 3.7002 88.6 4.0002 88.6 4.3002C88.6 4.6002 88.5 4.8002 88.3 5.1002C88.1 5.3002 87.8 5.4002 87.5 5.4002ZM94.3 6.4002V8.0002H92.9V11.7002C92.9 11.9002 92.9 12.0002 93 12.2002C93.1 12.3002 93.1 12.4002 93.2 12.4002C93.3 12.4002 93.4 12.5002 93.6 12.5002C93.7 12.5002 93.8 12.5002 93.9 12.5002C94 12.5002 94.1 12.5002 94.1 12.5002L94.4 14.1002C94.3 14.1002 94.1 14.2002 94 14.2002C93.8 14.2002 93.6 14.3002 93.3 14.3002C92.8 14.3002 92.3 14.3002 92 14.1002C91.6 13.9002 91.3 13.7002 91.1 13.4002C90.9 13.1002 90.8 12.7002 90.8 12.2002V8.0002H89.8V6.4002H90.8V4.5002H92.9V6.3002H94.3V6.4002ZM76.3 3.8002V14.0002H78.5V11.1002L79.6 9.8002L82.4 14.0002H85L81.2 8.4002L85 3.8002H82.4L78.7 8.3002H78.6V3.8002H76.3ZM74.6 3.8002V14.0002H72.5V3.8002H74.6ZM65.2 13.9002C65.6 14.1002 66 14.2002 66.5 14.2002C66.9 14.2002 67.2 14.2002 67.5 14.1002C67.8 14.0002 68 13.9002 68.2 13.7002C68.4 13.5002 68.6 13.3002 68.7 13.1002H68.8V14.0002H70.8V8.8002C70.8 8.3002 70.7 8.00019 70.5 7.60019C70.3 7.30019 70.1 7.0002 69.8 6.8002C69.5 6.6002 69.2 6.4002 68.8 6.3002C68.4 6.2002 68 6.2002 67.6 6.2002C67 6.2002 66.5 6.3002 66 6.5002C65.5 6.7002 65.2 6.9002 64.9 7.3002C64.6 7.6002 64.4 8.0002 64.3 8.5002L66.3 8.7002C66.4 8.4002 66.5 8.2002 66.7 8.1002C66.9 7.9002 67.2 7.8002 67.6 7.8002C68 7.8002 68.2 7.9002 68.4 8.1002C68.6 8.3002 68.7 8.5002 68.7 8.8002C68.7 9.0002 68.6 9.1002 68.5 9.2002C68.4 9.3002 68.2 9.3002 67.9 9.4002C67.6 9.4002 67.3 9.5002 66.8 9.5002C66.4 9.5002 66.1 9.6002 65.7 9.7002C65.4 9.8002 65.1 9.9002 64.8 10.1002C64.5 10.3002 64.3 10.5002 64.2 10.8002C64 11.1002 64 11.4002 64 11.9002C64 12.4002 64.1 12.8002 64.3 13.2002C64.5 13.5002 64.8 13.7002 65.2 13.9002ZM68 12.5002C67.8 12.6002 67.5 12.7002 67.2 12.7002C66.9 12.7002 66.6 12.6002 66.4 12.5002C66.2 12.3002 66.1 12.1002 66.1 11.8002C66.1 11.6002 66.2 11.4002 66.3 11.3002C66.4 11.2002 66.5 11.1002 66.7 11.0002C66.9 10.9002 67.1 10.9002 67.4 10.8002C67.5 10.8002 67.6 10.8002 67.8 10.7002C67.9 10.7002 68.1 10.7002 68.2 10.6002C68.3 10.6002 68.5 10.5002 68.6 10.5002C68.7 10.5002 68.8 10.4002 68.9 10.4002V11.2002C68.9 11.5002 68.8 11.7002 68.7 11.9002C68.6 12.1002 68.2 12.4002 68 12.5002ZM54.8 6.4002V14.0002H56.9V9.7002C56.9 9.4002 57 9.1002 57.1 8.9002C57.2 8.7002 57.4 8.5002 57.7 8.3002C57.9 8.2002 58.2 8.1002 58.5 8.1002C58.6 8.1002 58.8 8.1002 59 8.1002C59.2 8.1002 59.3 8.1002 59.4 8.2002V6.3002C59.3 6.3002 59.2 6.3002 59.1 6.2002C59 6.2002 58.9 6.2002 58.8 6.2002C58.4 6.2002 58 6.3002 57.7 6.6002C57.4 6.8002 57.1 7.2002 57 7.7002H56.9V6.4002H54.8ZM49.7 14.1002C48.9 14.1002 48.3 13.9002 47.7 13.6002C47.1 13.3002 46.7 12.8002 46.4 12.2002C46.1 11.6002 45.9 10.9002 45.9 10.1002C45.9 9.3002 46.1 8.6002 46.4 8.0002C46.7 7.4002 47.1 6.9002 47.7 6.6002C48.3 6.3002 48.9 6.1002 49.7 6.1002C50.5 6.1002 51.1 6.3002 51.7 6.6002C52.3 6.9002 52.7 7.4002 53 8.0002C53.3 8.6002 53.5 9.3002 53.5 10.1002C53.5 10.9002 53.3 11.6002 53 12.2002C52.7 12.8002 52.3 13.3002 51.7 13.6002C51.1 14.0002 50.4 14.1002 49.7 14.1002ZM49.7 12.5002C50.1 12.5002 50.3 12.4002 50.6 12.2002C50.8 12.0002 51 11.7002 51.1 11.4002C51.2 11.1002 51.3 10.7002 51.3 10.2002C51.3 9.8002 51.2 9.4002 51.1 9.0002C51 8.7002 50.8 8.4002 50.6 8.2002C50.3 8.0002 50 7.9002 49.7 7.9002C49.3 7.9002 49 8.0002 48.8 8.2002C48.6 8.4002 48.4 8.7002 48.3 9.0002C48.2 9.3002 48.1 9.7002 48.1 10.2002C48.1 10.6002 48.2 11.0002 48.3 11.4002C48.4 11.7002 48.6 12.0002 48.8 12.2002C49 12.4002 49.3 12.5002 49.7 12.5002ZM44.9 8.0002V6.4002H43.5V4.5002H41.4V6.3002H40.4V8.0002H41.4V12.0002C41.4 12.5002 41.5 12.9002 41.7 13.2002C41.9 13.5002 42.2 13.8002 42.6 13.9002C43 14.1002 43.4 14.1002 43.9 14.1002C44.2 14.1002 44.4 14.1002 44.6 14.0002C44.8 14.0002 44.9 13.9002 45 13.9002L44.7 12.3002C44.6 12.3002 44.6 12.3002 44.5 12.3002C44.4 12.3002 44.3 12.3002 44.2 12.3002C44.1 12.3002 43.9 12.3002 43.8 12.2002C43.7 12.2002 43.6 12.1002 43.6 12.0002C43.5 11.9002 43.5 11.7002 43.5 11.5002V8.0002H44.9ZM37.1 10.7002V6.4002H39.2V14.0002H37.2V12.6002H37.1C36.9 13.0002 36.6 13.4002 36.2 13.7002C35.8 14.0002 35.3 14.1002 34.7 14.1002C34.2 14.1002 33.7 14.0002 33.4 13.8002C33 13.6002 32.7 13.2002 32.5 12.8002C32.3 12.4002 32.2 11.9002 32.2 11.3002V6.4002H34.3V10.9002C34.3 11.4002 34.4 11.7002 34.7 12.0002C34.9 12.3002 35.3 12.4002 35.7 12.4002C36 12.4002 36.2 12.3002 36.4 12.2002C36.6 12.1002 36.8 11.9002 36.9 11.7002C37 11.4002 37.1 11.1002 37.1 10.7002ZM23.5 3.8002V5.6002H26.6V14.0002H28.7V5.6002H31.8V3.8002H23.5Z" fill="currentColor"/>
-<path d="M0 4.6V8.4L5.6 5.6V7.3L9.4 5.5V0L0 4.6ZM5.6 9.5L16 4.5V8.3L5.6 13.4V9.5ZM13.7 11.6L8.5 14.1L16 16V12.2L13.7 11.6Z" fill="currentColor"/>
-</svg>
- </span> </a> </div> <div> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="NE9wm" prefix="r0" component-url="/tutorial-vite-plugin/_astro/ThemeSwitch.byra3TKL.js" component-export="ThemeSwitch" renderer-url="/tutorial-vite-plugin/_astro/client.INAotZ3j.js" props="{&quot;data-astro-transition-persist&quot;:[0,&quot;astro-wblve62b-2&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeSwitch&quot;,&quot;value&quot;:true}" data-astro-transition-persist="astro-wblve62b-2"></astro-island> </div> <div>  </div> </nav> <resizable-panel class="h-full overflow-hidden" data-id="main" data-type="horizontal" data-pos="40%" data-min="30%" data-priority="min" data-max="60%" data-astro-cid-xhfupcag> <div class="container max-w-full horizontal" style="--pos: 40%" data-astro-cid-xhfupcag> <!-- It's important to keep the inline script here because it restores the position and blocks rendering to avoid flickering --> <script>(function(){const id = "main";
-const hasSidePanel = true;
-
-      if (!hasSidePanel) {
-        // if we don't have a side panel, we don't have to restore the handle
-        return;
+<!doctype html>
+<html lang="en" class="h-full" data-astro-transition-scope="astro-2ejwnqfq-3">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="TutorialKit" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v4.10.3" />
+    <title>Vite Plugin / YAML Plugin / importing-yaml-files</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="astro-view-transitions-enabled" content="true" />
+    <meta name="astro-view-transitions-fallback" content="animate" />
+    <link
+      rel="stylesheet"
+      href="/tutorial-vite-plugin/_astro/_slug_.BUdHHpJb.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/tutorial-vite-plugin/_astro/_slug_.BkaZf5Pl.css"
+    />
+    <script
+      type="module"
+      src="/tutorial-vite-plugin/_astro/hoisted.DVu4Hrmu.js"
+    ></script>
+    <style>
+      [data-astro-transition-scope="astro-2ejwnqfq-3"] {
+        view-transition-name: astro-2ejwnqfq-3;
       }
-
-      const sessionStorageKey = `tk_resizable_panel_${id}`;
-
-      const $container = document.querySelector(`resizable-panel[data-id="${id}"] > .container`);
-      const pos = sessionStorage.getItem(sessionStorageKey);
-
-      if (pos) {
-        $container.style.setProperty('--pos', pos);
+      @layer astro {
+        ::view-transition-old(astro-2ejwnqfq-3) {
+          animation: none;
+          opacity: 0;
+          mix-blend-mode: normal;
+        }
+        ::view-transition-new(astro-2ejwnqfq-3) {
+          animation: none;
+          mix-blend-mode: normal;
+        }
+        ::view-transition-group(astro-2ejwnqfq-3) {
+          animation: none;
+        }
       }
-    })();</script> <div class="panel" data-astro-cid-xhfupcag> <div class="h-full flex flex-col bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor"> <astro-island uid="tdWbm" prefix="r1" component-url="/tutorial-vite-plugin/_astro/NavWrapper.By9MbL9I.js" component-export="NavWrapper" renderer-url="/tutorial-vite-plugin/_astro/client.INAotZ3j.js" props="{&quot;lesson&quot;:[0,{&quot;data&quot;:[0,{&quot;mainCommand&quot;:[1,[[0,&quot;npm run dev&quot;],[0,&quot;Starting http server&quot;]]],&quot;prepareCommands&quot;:[1,[[1,[[0,&quot;npm install&quot;],[0,&quot;Installing dependencies&quot;]]]]],&quot;template&quot;:[0,&quot;default&quot;],&quot;title&quot;:[0,&quot;importing-yaml-files&quot;],&quot;type&quot;:[0,&quot;lesson&quot;],&quot;focus&quot;:[0,&quot;/index.js&quot;]}],&quot;id&quot;:[0,&quot;1&quot;],&quot;part&quot;:[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;Vite Plugin&quot;]}],&quot;chapter&quot;:[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;YAML Plugin&quot;]}],&quot;Markdown&quot;:[0,null],&quot;slug&quot;:[0,&quot;1-importing-yaml-files&quot;],&quot;files&quot;:[1,[[0,&quot;1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_files&quot;],[1,[[0,&quot;/content.yaml&quot;],[0,&quot;/index.js&quot;]]]]],&quot;solution&quot;:[1,[[0,&quot;1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_solution&quot;],[1,[[0,&quot;/index.js&quot;]]]]],&quot;next&quot;:[0,{&quot;title&quot;:[0,&quot;Defining custom plugin&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin&quot;]}]}],&quot;navList&quot;:[1,[[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;Vite Plugin&quot;],&quot;sections&quot;:[1,[[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;YAML Plugin&quot;],&quot;sections&quot;:[1,[[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;importing-yaml-files&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files&quot;]}],[0,{&quot;id&quot;:[0,&quot;2&quot;],&quot;title&quot;:[0,&quot;Defining custom plugin&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin&quot;]}],[0,{&quot;id&quot;:[0,&quot;3&quot;],&quot;title&quot;:[0,&quot;Defining load hook&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/3-defining-load-hook&quot;]}],[0,{&quot;id&quot;:[0,&quot;4&quot;],&quot;title&quot;:[0,&quot;Processing YAML files&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files&quot;]}],[0,{&quot;id&quot;:[0,&quot;5&quot;],&quot;title&quot;:[0,&quot;Summary&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin&quot;]}]]]}]]]}]]]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:true}" await-children=""><header class="grid grid-cols-[auto_minmax(0,1fr)_auto] h-[82px] gap-0.5 py-4 px-1 text-sm"><a class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor opacity-32 pointer-events-none" aria-disabled="true"><span class="i-ph-arrow-left scale-120"></span></a><div class="relative"><div data-state="closed" class="_NavContainer_p6600_33 absolute z-1 left-0 transition-[background,box-shadow] duration-0 right-0 rounded-[8px] border overflow-hidden"><button class="_ToggleButton_p6600_45 flex-1 flex items-center text-left py-3 px-3 w-full overflow-hidden"><div class="flex items-center gap-1 font-light truncate"><span>Vite Plugin</span><span class="_Divider_p6600_60">/</span><span>YAML Plugin</span><span class="_Divider_p6600_60">/</span><strong class="font-semibold">importing-yaml-files</strong></div><div class="_ToggleButtonIcon_p6600_72 ml-auto w-[30px] i-ph-caret-down-bold"></div></button></div></div><a class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover" aria-disabled="false" href="/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"><span class="i-ph-arrow-right scale-120"></span></a></header><!--astro:end--></astro-island> <div class="h-full overflow-auto scrollbar-transparent p-8"> <div class="markdown-content text-tk-elements-content-textColor"> <h1 id="welcome-to-vite-plugin-tutorial">Welcome to Vite Plugin tutorial</h1>
-<p>Hey there, and welcome to Vite Plugin tutorial 👋!</p>
-<p>In this tutorial we’ll go through steps for creating custom Vite plugins. We’ll start by creating a custom Vite plugin for loading <code>.yaml</code> files.</p>
-<p>Our goal is to be able to import <code>content.yaml</code> file in the Javascript file and use it as plain Javascript object.</p>
-<div class="expressive-code"><link rel="stylesheet" href="/tutorial-vite-plugin/_astro/ec.hcu7t.css"><script type="module" src="/tutorial-vite-plugin/_astro/ec.3zb7u.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre data-language="js"><code><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">import</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#C586C0;--1:#AC00D8">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"./content.yaml"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code">
-</div></div><div class="ec-line"><div class="code"><span style="--0:#9CDCFE;--1:#001080">console</span><span style="--0:#D4D4D4;--1:#000000">.</span><span style="--0:#DCDCAA;--1:#795E26">log</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#74A061;--1:#007A00">// > [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="import content from &#x22;./content.yaml&#x22;;console.log(content);// > [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]"><div></div></button></div></figure></div>
-<p>Try doing this in <code>index.js</code>:</p>
-<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="js"><code><div class="ec-line highlight ins"><div class="code"><span style="--0:#d09dcc;--1:#8c00b0">import</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#d09dcc;--1:#8c00b0">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#d5a18c;--1:#A31515">"./content.yaml"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line highlight del"><div class="code"><span style="--0:#7bb2df;--1:#0000FF">const</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#4FC1FF;--1:#005490">content</span><span style="--0:#D4D4D4;--1:#000000"> = [</span><span style="--0:#d5a08b;--1:#A31515">"Initial content"</span><span style="--0:#D4D4D4;--1:#000000">];</span></div></div><div class="ec-line"><div class="code">
-</div></div><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">export</span><span style="--0:#D4D4D4;--1:#000000"> { </span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000"> };</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="import content from &#x22;./content.yaml&#x22;;const content = [&#x22;Initial content&#x22;];export { content };"><div></div></button></div></figure></div>
-<p>At this point we should run into error when Vite fails to load <code>.yaml</code> file. ❌</p> </div> <div class="grid grid-cols-[1fr_1fr] gap-4 mt-8"> <div class="flex">  </div> <div class="flex"> <a class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer text-right items-end" href="/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"> <span class="icon text-tk-elements-navCard-iconColor i-ph-arrow-right pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"></span> <span class="line-clamp-2">Defining custom plugin</span> </a> </div> </div> </div> </div> </div> <div class="panel" data-astro-cid-xhfupcag> <div class="h-full border-l border-tk-elements-app-borderColor"> <astro-island uid="Z1Ut4zw" prefix="r2" component-url="/tutorial-vite-plugin/_astro/WorkspacePanelWrapper.B7ZswSU3.js" component-export="WorkspacePanelWrapper" renderer-url="/tutorial-vite-plugin/_astro/client.INAotZ3j.js" props="{&quot;lesson&quot;:[0,{&quot;data&quot;:[0,{&quot;mainCommand&quot;:[1,[[0,&quot;npm run dev&quot;],[0,&quot;Starting http server&quot;]]],&quot;prepareCommands&quot;:[1,[[1,[[0,&quot;npm install&quot;],[0,&quot;Installing dependencies&quot;]]]]],&quot;template&quot;:[0,&quot;default&quot;],&quot;title&quot;:[0,&quot;importing-yaml-files&quot;],&quot;type&quot;:[0,&quot;lesson&quot;],&quot;focus&quot;:[0,&quot;/index.js&quot;]}],&quot;id&quot;:[0,&quot;1&quot;],&quot;part&quot;:[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;Vite Plugin&quot;]}],&quot;chapter&quot;:[0,{&quot;id&quot;:[0,&quot;1&quot;],&quot;title&quot;:[0,&quot;YAML Plugin&quot;]}],&quot;Markdown&quot;:[0,null],&quot;slug&quot;:[0,&quot;1-importing-yaml-files&quot;],&quot;files&quot;:[1,[[0,&quot;1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_files&quot;],[1,[[0,&quot;/content.yaml&quot;],[0,&quot;/index.js&quot;]]]]],&quot;solution&quot;:[1,[[0,&quot;1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_solution&quot;],[1,[[0,&quot;/index.js&quot;]]]]],&quot;next&quot;:[0,{&quot;title&quot;:[0,&quot;Defining custom plugin&quot;],&quot;href&quot;:[0,&quot;/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin&quot;]}]}],&quot;data-astro-transition-persist&quot;:[0,&quot;astro-5n3vchjr-1&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;WorkspacePanel&quot;,&quot;value&quot;:true}" data-astro-transition-persist="astro-5n3vchjr-1" await-children=""><div class="" style="display:flex;flex-direction:column;height:100%;overflow:hidden;width:100%" data-panel-group="" data-panel-group-direction="vertical" data-panel-group-id=":r2R0:"><div class="" id="editor-opened" style="flex-basis:0;flex-grow:50.0;flex-shrink:1;overflow:hidden" data-panel="" data-panel-group-id=":r2R0:" data-panel-id="editor-opened" data-panel-size="50.0"><div class="bg-tk-elements-app-backgroundColor" style="display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%" data-panel-group="" data-panel-group-direction="horizontal" data-panel-group-id=":r2Rj:"><div class="flex flex-col" style="flex-basis:0;flex-grow:0.00;flex-shrink:1;overflow:hidden" data-panel="" data-panel-collapsible="true" data-panel-group-id=":r2Rj:" data-panel-id=":r2R3j:" data-panel-size="0.0"><div class="panel-header border-r border-b border-tk-elements-app-borderColor"><div class="panel-title"><div class="panel-icon i-ph-tree-structure-duotone shrink-0"></div><span class="text-sm">Files</span></div></div><div class="flex-grow py-2 border-r border-tk-elements-app-borderColor text-sm bg-tk-elements-fileTree-backgroundColor"><button class="flex items-center gap-2 w-full pr-2 border-2 border-transparent text-faded group bg-tk-elements-fileTree-file-backgroundColor hover:bg-tk-elements-fileTree-file-backgroundColorHover text-tk-elements-fileTree-file-textColor hover:text-tk-elements-fileTree-file-textColorHover" style="padding-left:12px"><div class="scale-120 shrink-0 i-ph-file-duotone text-tk-elements-fileTree-file-iconColor group-hover:text-tk-elements-fileTree-file-iconColorHover"></div><span>content.yaml</span></button><button class="flex items-center gap-2 w-full pr-2 border-2 border-transparent text-faded group bg-tk-elements-fileTree-file-backgroundColorSelected text-tk-elements-fileTree-file-textColorSelected" style="padding-left:12px"><div class="scale-120 shrink-0 i-ph-file-duotone text-tk-elements-fileTree-file-iconColorSelected"></div><span>index.js</span></button></div></div><div class="_PanelResizeHandle_1dq9w_1" role="separator" style="touch-action:none;user-select:none" tabindex="0" data-panel-group-direction="horizontal" data-panel-group-id=":r2Rj:" data-resize-handle="" data-resize-handle-state="inactive" data-panel-resize-handle-enabled="true" data-panel-resize-handle-id=":r2R5j:"></div><div class="flex flex-col" style="flex-basis:0;flex-grow:100;flex-shrink:1;overflow:hidden" data-panel="" data-panel-group-id=":r2Rj:" data-panel-id=":r2R7j:" data-panel-size="100.0"><div class="panel-header border-b border-tk-elements-app-borderColor flex justify-between"><div class="panel-title"><div class="panel-icon scale-125 "></div><span class="text-sm"></span></div><button class="panel-button px-2 py-0.5 -mr-1 -my-1"><div class="i-ph-clock-counter-clockwise-duotone"></div>Reset</button></div><div class="h-full flex-1 overflow-hidden"><div class="h-full relative"><div class="h-full overflow-hidden"></div></div></div></div></div></div><div class="_PanelResizeHandle_1dq9w_1" role="separator" style="touch-action:none;user-select:none" tabindex="0" data-panel-group-direction="vertical" data-panel-group-id=":r2R0:" data-resize-handle="" data-resize-handle-state="inactive" data-panel-resize-handle-enabled="true" data-panel-resize-handle-id=":r2R5:"></div><div class="border-t border-tk-elements-app-borderColor" id="previews-opened" style="flex-basis:0;flex-grow:50.0;flex-shrink:1;overflow:hidden" data-panel="" data-panel-group-id=":r2R0:" data-panel-id="previews-opened" data-panel-size="50.0"><div class="flex flex-col h-full w-full"><div class="panel-header border-b border-tk-elements-app-borderColor justify-between"><div class="panel-title"><div class="panel-icon i-ph-lightning-duotone"></div><span class="text-sm">Preparing Environment</span></div><button class="panel-button px-2 py-0.5 -mr-1 -my-1" title="Toggle Terminal"><span class="panel-button-icon i-ph-terminal-window-duotone"></span><span class="text-sm">Toggle Terminal</span></button></div><div class="flex-grow w-full flex justify-center items-center text-sm bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor">No preview to run nor steps to show</div></div></div><div class="_PanelResizeHandle_1dq9w_1" role="separator" style="touch-action:none;user-select:none" tabindex="0" data-panel-group-direction="vertical" data-panel-group-id=":r2R0:" data-resize-handle="" data-resize-handle-state="inactive" data-panel-resize-handle-enabled="true" data-panel-resize-handle-id=":r2R9:"></div><div class="border-t border-tk-elements-app-borderColor" id="terminal-closed" style="flex-basis:0;flex-grow:0.00;flex-shrink:1;overflow:hidden" data-panel="" data-panel-collapsible="true" data-panel-group-id=":r2R0:" data-panel-id="terminal-closed" data-panel-size="0.0"><div class="panel-container bg-tk-elements-app-backgroundColor"><div class="panel-tabs-header overflow-x-hidden"><div class="panel-title w-full"><ul class="flex h-full border-b border-tk-elements-app-borderColor w-full" role="tablist" aria-orientation="horizontal"><li><button class="group h-full px-4 flex items-center gap-1.5 whitespace-nowrap text-sm position-relative border-r border-tk-elements-panel-headerTab-borderColor bg-tk-elements-panel-headerTab-backgroundColorActive text-tk-elements-panel-headerTab-textColorActive border-tk-elements-panel-headerTab-borderColorActive shadow-[0px_1px_0px_0px] shadow-tk-elements-panel-headerTab-backgroundColorActive" title="Output" aria-selected="true"><span class="text-tk-elements-panel-headerTab-iconColor i-ph-newspaper-duotone text-tk-elements-panel-headerTab-iconColorActive"></span>Output</button></li></ul></div></div><div class="h-full overflow-hidden"></div></div></div></div><!--astro:end--></astro-island> </div> </div>
-          <div class="divider" data-astro-cid-xhfupcag></div> </div> </resizable-panel>   </main>  </body></html>
+      [data-astro-transition-fallback="old"]
+        [data-astro-transition-scope="astro-2ejwnqfq-3"],
+      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2ejwnqfq-3"] {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+      [data-astro-transition-fallback="new"]
+        [data-astro-transition-scope="astro-2ejwnqfq-3"],
+      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2ejwnqfq-3"] {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+    </style>
+  </head>
+  <body class="h-full text-black">
+    <div id="previews-container"></div>
+    <main
+      class="max-w-full flex flex-col h-screen overflow-hidden"
+      data-swap-root
+    >
+      <nav
+        class="bg-tk-elements-topBar-backgroundColor border-b border-tk-elements-app-borderColor flex max-w-full items-center p-3 px-4 min-h-[56px]"
+      >
+        <div class="flex flex-1">
+          <a
+            href="#"
+            class="flex items-center text-tk-elements-topBar-logo-color hover:text-tk-elements-topBar-logo-colorHover"
+          >
+            <span class="h-5 w-auto">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 95 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M60.5 14.0002V6.4002H62.6V14.0002H60.5ZM61.6 5.4002C61.3 5.4002 61 5.3002 60.8 5.1002C60.6 4.9002 60.5 4.6002 60.5 4.3002C60.5 4.0002 60.6 3.8002 60.8 3.5002C61 3.3002 61.3 3.2002 61.6 3.2002C61.9 3.2002 62.2 3.3002 62.4 3.5002C62.6 3.7002 62.7 4.0002 62.7 4.3002C62.7 4.6002 62.6 4.8002 62.4 5.1002C62.2 5.3002 61.9 5.4002 61.6 5.4002ZM86.4 14.0002V6.4002H88.5V14.0002H86.4ZM87.5 5.4002C87.2 5.4002 86.9 5.3002 86.7 5.1002C86.5 4.9002 86.4 4.6002 86.4 4.3002C86.4 4.0002 86.5 3.8002 86.7 3.5002C86.9 3.3002 87.2 3.2002 87.5 3.2002C87.8 3.2002 88.1 3.3002 88.3 3.5002C88.5 3.7002 88.6 4.0002 88.6 4.3002C88.6 4.6002 88.5 4.8002 88.3 5.1002C88.1 5.3002 87.8 5.4002 87.5 5.4002ZM94.3 6.4002V8.0002H92.9V11.7002C92.9 11.9002 92.9 12.0002 93 12.2002C93.1 12.3002 93.1 12.4002 93.2 12.4002C93.3 12.4002 93.4 12.5002 93.6 12.5002C93.7 12.5002 93.8 12.5002 93.9 12.5002C94 12.5002 94.1 12.5002 94.1 12.5002L94.4 14.1002C94.3 14.1002 94.1 14.2002 94 14.2002C93.8 14.2002 93.6 14.3002 93.3 14.3002C92.8 14.3002 92.3 14.3002 92 14.1002C91.6 13.9002 91.3 13.7002 91.1 13.4002C90.9 13.1002 90.8 12.7002 90.8 12.2002V8.0002H89.8V6.4002H90.8V4.5002H92.9V6.3002H94.3V6.4002ZM76.3 3.8002V14.0002H78.5V11.1002L79.6 9.8002L82.4 14.0002H85L81.2 8.4002L85 3.8002H82.4L78.7 8.3002H78.6V3.8002H76.3ZM74.6 3.8002V14.0002H72.5V3.8002H74.6ZM65.2 13.9002C65.6 14.1002 66 14.2002 66.5 14.2002C66.9 14.2002 67.2 14.2002 67.5 14.1002C67.8 14.0002 68 13.9002 68.2 13.7002C68.4 13.5002 68.6 13.3002 68.7 13.1002H68.8V14.0002H70.8V8.8002C70.8 8.3002 70.7 8.00019 70.5 7.60019C70.3 7.30019 70.1 7.0002 69.8 6.8002C69.5 6.6002 69.2 6.4002 68.8 6.3002C68.4 6.2002 68 6.2002 67.6 6.2002C67 6.2002 66.5 6.3002 66 6.5002C65.5 6.7002 65.2 6.9002 64.9 7.3002C64.6 7.6002 64.4 8.0002 64.3 8.5002L66.3 8.7002C66.4 8.4002 66.5 8.2002 66.7 8.1002C66.9 7.9002 67.2 7.8002 67.6 7.8002C68 7.8002 68.2 7.9002 68.4 8.1002C68.6 8.3002 68.7 8.5002 68.7 8.8002C68.7 9.0002 68.6 9.1002 68.5 9.2002C68.4 9.3002 68.2 9.3002 67.9 9.4002C67.6 9.4002 67.3 9.5002 66.8 9.5002C66.4 9.5002 66.1 9.6002 65.7 9.7002C65.4 9.8002 65.1 9.9002 64.8 10.1002C64.5 10.3002 64.3 10.5002 64.2 10.8002C64 11.1002 64 11.4002 64 11.9002C64 12.4002 64.1 12.8002 64.3 13.2002C64.5 13.5002 64.8 13.7002 65.2 13.9002ZM68 12.5002C67.8 12.6002 67.5 12.7002 67.2 12.7002C66.9 12.7002 66.6 12.6002 66.4 12.5002C66.2 12.3002 66.1 12.1002 66.1 11.8002C66.1 11.6002 66.2 11.4002 66.3 11.3002C66.4 11.2002 66.5 11.1002 66.7 11.0002C66.9 10.9002 67.1 10.9002 67.4 10.8002C67.5 10.8002 67.6 10.8002 67.8 10.7002C67.9 10.7002 68.1 10.7002 68.2 10.6002C68.3 10.6002 68.5 10.5002 68.6 10.5002C68.7 10.5002 68.8 10.4002 68.9 10.4002V11.2002C68.9 11.5002 68.8 11.7002 68.7 11.9002C68.6 12.1002 68.2 12.4002 68 12.5002ZM54.8 6.4002V14.0002H56.9V9.7002C56.9 9.4002 57 9.1002 57.1 8.9002C57.2 8.7002 57.4 8.5002 57.7 8.3002C57.9 8.2002 58.2 8.1002 58.5 8.1002C58.6 8.1002 58.8 8.1002 59 8.1002C59.2 8.1002 59.3 8.1002 59.4 8.2002V6.3002C59.3 6.3002 59.2 6.3002 59.1 6.2002C59 6.2002 58.9 6.2002 58.8 6.2002C58.4 6.2002 58 6.3002 57.7 6.6002C57.4 6.8002 57.1 7.2002 57 7.7002H56.9V6.4002H54.8ZM49.7 14.1002C48.9 14.1002 48.3 13.9002 47.7 13.6002C47.1 13.3002 46.7 12.8002 46.4 12.2002C46.1 11.6002 45.9 10.9002 45.9 10.1002C45.9 9.3002 46.1 8.6002 46.4 8.0002C46.7 7.4002 47.1 6.9002 47.7 6.6002C48.3 6.3002 48.9 6.1002 49.7 6.1002C50.5 6.1002 51.1 6.3002 51.7 6.6002C52.3 6.9002 52.7 7.4002 53 8.0002C53.3 8.6002 53.5 9.3002 53.5 10.1002C53.5 10.9002 53.3 11.6002 53 12.2002C52.7 12.8002 52.3 13.3002 51.7 13.6002C51.1 14.0002 50.4 14.1002 49.7 14.1002ZM49.7 12.5002C50.1 12.5002 50.3 12.4002 50.6 12.2002C50.8 12.0002 51 11.7002 51.1 11.4002C51.2 11.1002 51.3 10.7002 51.3 10.2002C51.3 9.8002 51.2 9.4002 51.1 9.0002C51 8.7002 50.8 8.4002 50.6 8.2002C50.3 8.0002 50 7.9002 49.7 7.9002C49.3 7.9002 49 8.0002 48.8 8.2002C48.6 8.4002 48.4 8.7002 48.3 9.0002C48.2 9.3002 48.1 9.7002 48.1 10.2002C48.1 10.6002 48.2 11.0002 48.3 11.4002C48.4 11.7002 48.6 12.0002 48.8 12.2002C49 12.4002 49.3 12.5002 49.7 12.5002ZM44.9 8.0002V6.4002H43.5V4.5002H41.4V6.3002H40.4V8.0002H41.4V12.0002C41.4 12.5002 41.5 12.9002 41.7 13.2002C41.9 13.5002 42.2 13.8002 42.6 13.9002C43 14.1002 43.4 14.1002 43.9 14.1002C44.2 14.1002 44.4 14.1002 44.6 14.0002C44.8 14.0002 44.9 13.9002 45 13.9002L44.7 12.3002C44.6 12.3002 44.6 12.3002 44.5 12.3002C44.4 12.3002 44.3 12.3002 44.2 12.3002C44.1 12.3002 43.9 12.3002 43.8 12.2002C43.7 12.2002 43.6 12.1002 43.6 12.0002C43.5 11.9002 43.5 11.7002 43.5 11.5002V8.0002H44.9ZM37.1 10.7002V6.4002H39.2V14.0002H37.2V12.6002H37.1C36.9 13.0002 36.6 13.4002 36.2 13.7002C35.8 14.0002 35.3 14.1002 34.7 14.1002C34.2 14.1002 33.7 14.0002 33.4 13.8002C33 13.6002 32.7 13.2002 32.5 12.8002C32.3 12.4002 32.2 11.9002 32.2 11.3002V6.4002H34.3V10.9002C34.3 11.4002 34.4 11.7002 34.7 12.0002C34.9 12.3002 35.3 12.4002 35.7 12.4002C36 12.4002 36.2 12.3002 36.4 12.2002C36.6 12.1002 36.8 11.9002 36.9 11.7002C37 11.4002 37.1 11.1002 37.1 10.7002ZM23.5 3.8002V5.6002H26.6V14.0002H28.7V5.6002H31.8V3.8002H23.5Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M0 4.6V8.4L5.6 5.6V7.3L9.4 5.5V0L0 4.6ZM5.6 9.5L16 4.5V8.3L5.6 13.4V9.5ZM13.7 11.6L8.5 14.1L16 16V12.2L13.7 11.6Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div>
+          <style>
+            astro-island,
+            astro-slot,
+            astro-static-slot {
+              display: contents;
+            }
+          </style>
+          <script>
+            (() => {
+              var e = async (t) => {
+                await (
+                  await t()
+                )();
+              };
+              (self.Astro || (self.Astro = {})).load = e;
+              window.dispatchEvent(new Event("astro:load"));
+            })();
+            (() => {
+              var A = Object.defineProperty;
+              var g = (i, o, a) =>
+                o in i
+                  ? A(i, o, {
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0,
+                      value: a,
+                    })
+                  : (i[o] = a);
+              var d = (i, o, a) => g(i, typeof o != "symbol" ? o + "" : o, a);
+              {
+                let i = {
+                    0: (t) => m(t),
+                    1: (t) => a(t),
+                    2: (t) => new RegExp(t),
+                    3: (t) => new Date(t),
+                    4: (t) => new Map(a(t)),
+                    5: (t) => new Set(a(t)),
+                    6: (t) => BigInt(t),
+                    7: (t) => new URL(t),
+                    8: (t) => new Uint8Array(t),
+                    9: (t) => new Uint16Array(t),
+                    10: (t) => new Uint32Array(t),
+                  },
+                  o = (t) => {
+                    let [l, e] = t;
+                    return l in i ? i[l](e) : void 0;
+                  },
+                  a = (t) => t.map(o),
+                  m = (t) =>
+                    typeof t != "object" || t === null
+                      ? t
+                      : Object.fromEntries(
+                          Object.entries(t).map(([l, e]) => [l, o(e)])
+                        );
+                class y extends HTMLElement {
+                  constructor() {
+                    super(...arguments);
+                    d(this, "Component");
+                    d(this, "hydrator");
+                    d(this, "hydrate", async () => {
+                      var b;
+                      if (!this.hydrator || !this.isConnected) return;
+                      let e =
+                        (b = this.parentElement) == null
+                          ? void 0
+                          : b.closest("astro-island[ssr]");
+                      if (e) {
+                        e.addEventListener("astro:hydrate", this.hydrate, {
+                          once: !0,
+                        });
+                        return;
+                      }
+                      let c = this.querySelectorAll("astro-slot"),
+                        n = {},
+                        h = this.querySelectorAll(
+                          "template[data-astro-template]"
+                        );
+                      for (let r of h) {
+                        let s = r.closest(this.tagName);
+                        s != null &&
+                          s.isSameNode(this) &&
+                          ((n[
+                            r.getAttribute("data-astro-template") || "default"
+                          ] = r.innerHTML),
+                          r.remove());
+                      }
+                      for (let r of c) {
+                        let s = r.closest(this.tagName);
+                        s != null &&
+                          s.isSameNode(this) &&
+                          (n[r.getAttribute("name") || "default"] =
+                            r.innerHTML);
+                      }
+                      let p;
+                      try {
+                        p = this.hasAttribute("props")
+                          ? m(JSON.parse(this.getAttribute("props")))
+                          : {};
+                      } catch (r) {
+                        let s =
+                            this.getAttribute("component-url") || "<unknown>",
+                          v = this.getAttribute("component-export");
+                        throw (
+                          (v && (s += ` (export ${v})`),
+                          console.error(
+                            `[hydrate] Error parsing props for component ${s}`,
+                            this.getAttribute("props"),
+                            r
+                          ),
+                          r)
+                        );
+                      }
+                      let u;
+                      await this.hydrator(this)(this.Component, p, n, {
+                        client: this.getAttribute("client"),
+                      }),
+                        this.removeAttribute("ssr"),
+                        this.dispatchEvent(new CustomEvent("astro:hydrate"));
+                    });
+                    d(this, "unmount", () => {
+                      this.isConnected ||
+                        this.dispatchEvent(new CustomEvent("astro:unmount"));
+                    });
+                  }
+                  disconnectedCallback() {
+                    document.removeEventListener(
+                      "astro:after-swap",
+                      this.unmount
+                    ),
+                      document.addEventListener(
+                        "astro:after-swap",
+                        this.unmount,
+                        { once: !0 }
+                      );
+                  }
+                  connectedCallback() {
+                    if (
+                      !this.hasAttribute("await-children") ||
+                      document.readyState === "interactive" ||
+                      document.readyState === "complete"
+                    )
+                      this.childrenConnectedCallback();
+                    else {
+                      let e = () => {
+                          document.removeEventListener("DOMContentLoaded", e),
+                            c.disconnect(),
+                            this.childrenConnectedCallback();
+                        },
+                        c = new MutationObserver(() => {
+                          var n;
+                          ((n = this.lastChild) == null
+                            ? void 0
+                            : n.nodeType) === Node.COMMENT_NODE &&
+                            this.lastChild.nodeValue === "astro:end" &&
+                            (this.lastChild.remove(), e());
+                        });
+                      c.observe(this, { childList: !0 }),
+                        document.addEventListener("DOMContentLoaded", e);
+                    }
+                  }
+                  async childrenConnectedCallback() {
+                    let e = this.getAttribute("before-hydration-url");
+                    e && (await import(e)), this.start();
+                  }
+                  async start() {
+                    let e = JSON.parse(this.getAttribute("opts")),
+                      c = this.getAttribute("client");
+                    if (Astro[c] === void 0) {
+                      window.addEventListener(
+                        `astro:${c}`,
+                        () => this.start(),
+                        { once: !0 }
+                      );
+                      return;
+                    }
+                    try {
+                      await Astro[c](
+                        async () => {
+                          let n = this.getAttribute("renderer-url"),
+                            [h, { default: p }] = await Promise.all([
+                              import(this.getAttribute("component-url")),
+                              n ? import(n) : () => () => {},
+                            ]),
+                            u =
+                              this.getAttribute("component-export") ||
+                              "default";
+                          if (!u.includes(".")) this.Component = h[u];
+                          else {
+                            this.Component = h;
+                            for (let f of u.split("."))
+                              this.Component = this.Component[f];
+                          }
+                          return (this.hydrator = p), this.hydrate;
+                        },
+                        e,
+                        this
+                      );
+                    } catch (n) {
+                      console.error(
+                        `[astro-island] Error hydrating ${this.getAttribute("component-url")}`,
+                        n
+                      );
+                    }
+                  }
+                  attributeChangedCallback() {
+                    this.hydrate();
+                  }
+                }
+                d(y, "observedAttributes", ["props"]),
+                  customElements.get("astro-island") ||
+                    customElements.define("astro-island", y);
+              }
+            })();
+          </script>
+          <astro-island
+            uid="NE9wm"
+            prefix="r0"
+            component-url="/tutorial-vite-plugin/_astro/ThemeSwitch.byra3TKL.js"
+            component-export="ThemeSwitch"
+            renderer-url="/tutorial-vite-plugin/_astro/client.INAotZ3j.js"
+            props='{"data-astro-transition-persist":[0,"astro-wblve62b-2"]}'
+            ssr=""
+            client="load"
+            opts='{"name":"ThemeSwitch","value":true}'
+            data-astro-transition-persist="astro-wblve62b-2"
+          ></astro-island>
+        </div>
+        <div></div>
+      </nav>
+      <resizable-panel
+        class="h-full overflow-hidden"
+        data-id="main"
+        data-type="horizontal"
+        data-pos="40%"
+        data-min="30%"
+        data-priority="min"
+        data-max="60%"
+        data-astro-cid-xhfupcag
+      >
+        <div
+          class="container max-w-full horizontal"
+          style="--pos: 40%"
+          data-astro-cid-xhfupcag
+        >
+          <!-- It's important to keep the inline script here because it restores the position and blocks rendering to avoid flickering -->
+          <script>
+            (function () {
+              const id = "main";
+              const hasSidePanel = true;
+
+              if (!hasSidePanel) {
+                // if we don't have a side panel, we don't have to restore the handle
+                return;
+              }
+
+              const sessionStorageKey = `tk_resizable_panel_${id}`;
+
+              const $container = document.querySelector(
+                `resizable-panel[data-id="${id}"] > .container`
+              );
+              const pos = sessionStorage.getItem(sessionStorageKey);
+
+              if (pos) {
+                $container.style.setProperty("--pos", pos);
+              }
+            })();
+          </script>
+          <div class="panel" data-astro-cid-xhfupcag>
+            <div
+              class="h-full flex flex-col bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor"
+            >
+              <astro-island
+                uid="tdWbm"
+                prefix="r1"
+                component-url="/tutorial-vite-plugin/_astro/NavWrapper.By9MbL9I.js"
+                component-export="NavWrapper"
+                renderer-url="/tutorial-vite-plugin/_astro/client.INAotZ3j.js"
+                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"default"],"title":[0,"importing-yaml-files"],"type":[0,"lesson"],"focus":[0,"/index.js"]}],"id":[0,"1"],"part":[0,{"id":[0,"1"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"1"],"title":[0,"YAML Plugin"]}],"Markdown":[0,null],"slug":[0,"1-importing-yaml-files"],"files":[1,[[0,"1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_files"],[1,[[0,"/content.yaml"],[0,"/index.js"]]]]],"solution":[1,[[0,"1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_solution"],[1,[[0,"/index.js"]]]]],"next":[0,{"title":[0,"Defining custom plugin"],"href":[0,"/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}]}],"navList":[1,[[0,{"id":[0,"1"],"title":[0,"Vite Plugin"],"sections":[1,[[0,{"id":[0,"1"],"title":[0,"YAML Plugin"],"sections":[1,[[0,{"id":[0,"1"],"title":[0,"importing-yaml-files"],"href":[0,"/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],[0,{"id":[0,"2"],"title":[0,"Defining custom plugin"],"href":[0,"/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}],[0,{"id":[0,"3"],"title":[0,"Defining load hook"],"href":[0,"/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}],[0,{"id":[0,"4"],"title":[0,"Processing YAML files"],"href":[0,"/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"]}],[0,{"id":[0,"5"],"title":[0,"Summary"],"href":[0,"/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}]]]}]]]}]]]}'
+                ssr=""
+                client="load"
+                opts='{"name":"Nav","value":true}'
+                await-children=""
+                ><header
+                  class="grid grid-cols-[auto_minmax(0,1fr)_auto] h-[82px] gap-0.5 py-4 px-1 text-sm"
+                >
+                  <a
+                    class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor opacity-32 pointer-events-none"
+                    aria-disabled="true"
+                    ><span class="i-ph-arrow-left scale-120"></span
+                  ></a>
+                  <div class="relative">
+                    <div
+                      data-state="closed"
+                      class="_NavContainer_p6600_33 absolute z-1 left-0 transition-[background,box-shadow] duration-0 right-0 rounded-[8px] border overflow-hidden"
+                    >
+                      <button
+                        class="_ToggleButton_p6600_45 flex-1 flex items-center text-left py-3 px-3 w-full overflow-hidden"
+                      >
+                        <div
+                          class="flex items-center gap-1 font-light truncate"
+                        >
+                          <span>Vite Plugin</span
+                          ><span class="_Divider_p6600_60">/</span
+                          ><span>YAML Plugin</span
+                          ><span class="_Divider_p6600_60">/</span
+                          ><strong class="font-semibold"
+                            >importing-yaml-files</strong
+                          >
+                        </div>
+                        <div
+                          class="_ToggleButtonIcon_p6600_72 ml-auto w-[30px] i-ph-caret-down-bold"
+                        ></div>
+                      </button>
+                    </div>
+                  </div>
+                  <a
+                    class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
+                    aria-disabled="false"
+                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"
+                    ><span class="i-ph-arrow-right scale-120"></span
+                  ></a>
+                </header>
+                <!--astro:end--></astro-island
+              >
+              <div class="h-full overflow-auto scrollbar-transparent p-8">
+                <div
+                  class="markdown-content text-tk-elements-content-textColor"
+                >
+                  <h1 id="welcome-to-vite-plugin-tutorial">
+                    Welcome to Vite Plugin tutorial
+                  </h1>
+                  <p>Hey there, and welcome to Vite Plugin tutorial 👋!</p>
+                  <p>
+                    In this tutorial we’ll go through steps for creating custom
+                    Vite plugins. We’ll start by creating a custom Vite plugin
+                    for loading <code>.yaml</code> files.
+                  </p>
+                  <p>
+                    Our goal is to be able to import
+                    <code>content.yaml</code> file in the Javascript file and
+                    use it as plain Javascript object.
+                  </p>
+                  <div class="expressive-code">
+                    <link
+                      rel="stylesheet"
+                      href="/tutorial-vite-plugin/_astro/ec.hcu7t.css"
+                    />
+                    <script
+                      type="module"
+                      src="/tutorial-vite-plugin/_astro/ec.3zb7u.js"
+                    ></script>
+                    <figure class="frame">
+                      <figcaption class="header"></figcaption>
+                      <pre
+                        data-language="js"
+                      ><code><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">import</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#C586C0;--1:#AC00D8">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"./content.yaml"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#9CDCFE;--1:#001080">console</span><span style="--0:#D4D4D4;--1:#000000">.</span><span style="--0:#DCDCAA;--1:#795E26">log</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#74A061;--1:#007A00">// > [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]</span></div></div></code></pre>
+                      <div class="copy">
+                        <button
+                          title="Copy to clipboard"
+                          data-copied="Copied!"
+                          data-code="import content from &#x22;./content.yaml&#x22;;console.log(content);// > [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]"
+                        >
+                          <div></div>
+                        </button>
+                      </div>
+                    </figure>
+                  </div>
+                  <p>Try doing this in <code>index.js</code>:</p>
+                  <div class="expressive-code">
+                    <figure class="frame">
+                      <figcaption class="header"></figcaption>
+                      <pre
+                        data-language="js"
+                      ><code><div class="ec-line highlight ins"><div class="code"><span style="--0:#d09dcc;--1:#8c00b0">import</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#d09dcc;--1:#8c00b0">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#d5a18c;--1:#A31515">"./content.yaml"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line highlight del"><div class="code"><span style="--0:#7bb2df;--1:#0000FF">const</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#4FC1FF;--1:#005490">content</span><span style="--0:#D4D4D4;--1:#000000"> = [</span><span style="--0:#d5a08b;--1:#A31515">"Initial content"</span><span style="--0:#D4D4D4;--1:#000000">];</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">export</span><span style="--0:#D4D4D4;--1:#000000"> { </span><span style="--0:#9CDCFE;--1:#001080">content</span><span style="--0:#D4D4D4;--1:#000000"> };</span></div></div></code></pre>
+                      <div class="copy">
+                        <button
+                          title="Copy to clipboard"
+                          data-copied="Copied!"
+                          data-code="import content from &#x22;./content.yaml&#x22;;const content = [&#x22;Initial content&#x22;];export { content };"
+                        >
+                          <div></div>
+                        </button>
+                      </div>
+                    </figure>
+                  </div>
+                  <p>
+                    At this point we should run into error when Vite fails to
+                    load <code>.yaml</code> file. ❌
+                  </p>
+                </div>
+                <div class="grid grid-cols-[1fr_1fr] gap-4 mt-8">
+                  <div class="flex"></div>
+                  <div class="flex">
+                    <a
+                      class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer text-right items-end"
+                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"
+                    >
+                      <span
+                        class="icon text-tk-elements-navCard-iconColor i-ph-arrow-right pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"
+                      ></span>
+                      <span class="line-clamp-2">Defining custom plugin</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel" data-astro-cid-xhfupcag>
+            <div class="h-full border-l border-tk-elements-app-borderColor">
+              <astro-island
+                uid="Z1Ut4zw"
+                prefix="r2"
+                component-url="/tutorial-vite-plugin/_astro/WorkspacePanelWrapper.B7ZswSU3.js"
+                component-export="WorkspacePanelWrapper"
+                renderer-url="/tutorial-vite-plugin/_astro/client.INAotZ3j.js"
+                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"default"],"title":[0,"importing-yaml-files"],"type":[0,"lesson"],"focus":[0,"/index.js"]}],"id":[0,"1"],"part":[0,{"id":[0,"1"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"1"],"title":[0,"YAML Plugin"]}],"Markdown":[0,null],"slug":[0,"1-importing-yaml-files"],"files":[1,[[0,"1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_files"],[1,[[0,"/content.yaml"],[0,"/index.js"]]]]],"solution":[1,[[0,"1-vite-plugin/1-yaml-plugin/1-importing-yaml-files/_solution"],[1,[[0,"/index.js"]]]]],"next":[0,{"title":[0,"Defining custom plugin"],"href":[0,"/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}]}],"data-astro-transition-persist":[0,"astro-5n3vchjr-1"]}'
+                ssr=""
+                client="load"
+                opts='{"name":"WorkspacePanel","value":true}'
+                data-astro-transition-persist="astro-5n3vchjr-1"
+                await-children=""
+                ><div
+                  class=""
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    overflow: hidden;
+                    width: 100%;
+                  "
+                  data-panel-group=""
+                  data-panel-group-direction="vertical"
+                  data-panel-group-id=":r2R0:"
+                >
+                  <div
+                    class=""
+                    id="editor-opened"
+                    style="
+                      flex-basis: 0;
+                      flex-grow: 50;
+                      flex-shrink: 1;
+                      overflow: hidden;
+                    "
+                    data-panel=""
+                    data-panel-group-id=":r2R0:"
+                    data-panel-id="editor-opened"
+                    data-panel-size="50.0"
+                  >
+                    <div
+                      class="bg-tk-elements-app-backgroundColor"
+                      style="
+                        display: flex;
+                        flex-direction: row;
+                        height: 100%;
+                        overflow: hidden;
+                        width: 100%;
+                      "
+                      data-panel-group=""
+                      data-panel-group-direction="horizontal"
+                      data-panel-group-id=":r2Rj:"
+                    >
+                      <div
+                        class="flex flex-col"
+                        style="
+                          flex-basis: 0;
+                          flex-grow: 0;
+                          flex-shrink: 1;
+                          overflow: hidden;
+                        "
+                        data-panel=""
+                        data-panel-collapsible="true"
+                        data-panel-group-id=":r2Rj:"
+                        data-panel-id=":r2R3j:"
+                        data-panel-size="0.0"
+                      >
+                        <div
+                          class="panel-header border-r border-b border-tk-elements-app-borderColor"
+                        >
+                          <div class="panel-title">
+                            <div
+                              class="panel-icon i-ph-tree-structure-duotone shrink-0"
+                            ></div>
+                            <span class="text-sm">Files</span>
+                          </div>
+                        </div>
+                        <div
+                          class="flex-grow py-2 border-r border-tk-elements-app-borderColor text-sm bg-tk-elements-fileTree-backgroundColor"
+                        >
+                          <button
+                            class="flex items-center gap-2 w-full pr-2 border-2 border-transparent text-faded group bg-tk-elements-fileTree-file-backgroundColor hover:bg-tk-elements-fileTree-file-backgroundColorHover text-tk-elements-fileTree-file-textColor hover:text-tk-elements-fileTree-file-textColorHover"
+                            style="padding-left: 12px"
+                          >
+                            <div
+                              class="scale-120 shrink-0 i-ph-file-duotone text-tk-elements-fileTree-file-iconColor group-hover:text-tk-elements-fileTree-file-iconColorHover"
+                            ></div>
+                            <span>content.yaml</span></button
+                          ><button
+                            class="flex items-center gap-2 w-full pr-2 border-2 border-transparent text-faded group bg-tk-elements-fileTree-file-backgroundColorSelected text-tk-elements-fileTree-file-textColorSelected"
+                            style="padding-left: 12px"
+                          >
+                            <div
+                              class="scale-120 shrink-0 i-ph-file-duotone text-tk-elements-fileTree-file-iconColorSelected"
+                            ></div>
+                            <span>index.js</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div
+                        class="_PanelResizeHandle_1dq9w_1"
+                        role="separator"
+                        style="touch-action: none; user-select: none"
+                        tabindex="0"
+                        data-panel-group-direction="horizontal"
+                        data-panel-group-id=":r2Rj:"
+                        data-resize-handle=""
+                        data-resize-handle-state="inactive"
+                        data-panel-resize-handle-enabled="true"
+                        data-panel-resize-handle-id=":r2R5j:"
+                      ></div>
+                      <div
+                        class="flex flex-col"
+                        style="
+                          flex-basis: 0;
+                          flex-grow: 100;
+                          flex-shrink: 1;
+                          overflow: hidden;
+                        "
+                        data-panel=""
+                        data-panel-group-id=":r2Rj:"
+                        data-panel-id=":r2R7j:"
+                        data-panel-size="100.0"
+                      >
+                        <div
+                          class="panel-header border-b border-tk-elements-app-borderColor flex justify-between"
+                        >
+                          <div class="panel-title">
+                            <div class="panel-icon scale-125"></div>
+                            <span class="text-sm"></span>
+                          </div>
+                          <button class="panel-button px-2 py-0.5 -mr-1 -my-1">
+                            <div
+                              class="i-ph-clock-counter-clockwise-duotone"
+                            ></div>
+                            Reset
+                          </button>
+                        </div>
+                        <div class="h-full flex-1 overflow-hidden">
+                          <div class="h-full relative">
+                            <div class="h-full overflow-hidden"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="_PanelResizeHandle_1dq9w_1"
+                    role="separator"
+                    style="touch-action: none; user-select: none"
+                    tabindex="0"
+                    data-panel-group-direction="vertical"
+                    data-panel-group-id=":r2R0:"
+                    data-resize-handle=""
+                    data-resize-handle-state="inactive"
+                    data-panel-resize-handle-enabled="true"
+                    data-panel-resize-handle-id=":r2R5:"
+                  ></div>
+                  <div
+                    class="border-t border-tk-elements-app-borderColor"
+                    id="previews-opened"
+                    style="
+                      flex-basis: 0;
+                      flex-grow: 50;
+                      flex-shrink: 1;
+                      overflow: hidden;
+                    "
+                    data-panel=""
+                    data-panel-group-id=":r2R0:"
+                    data-panel-id="previews-opened"
+                    data-panel-size="50.0"
+                  >
+                    <div class="flex flex-col h-full w-full">
+                      <div
+                        class="panel-header border-b border-tk-elements-app-borderColor justify-between"
+                      >
+                        <div class="panel-title">
+                          <div class="panel-icon i-ph-lightning-duotone"></div>
+                          <span class="text-sm">Preparing Environment</span>
+                        </div>
+                        <button
+                          class="panel-button px-2 py-0.5 -mr-1 -my-1"
+                          title="Toggle Terminal"
+                        >
+                          <span
+                            class="panel-button-icon i-ph-terminal-window-duotone"
+                          ></span
+                          ><span class="text-sm">Toggle Terminal</span>
+                        </button>
+                      </div>
+                      <div
+                        class="flex-grow w-full flex justify-center items-center text-sm bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor"
+                      >
+                        No preview to run nor steps to show
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="_PanelResizeHandle_1dq9w_1"
+                    role="separator"
+                    style="touch-action: none; user-select: none"
+                    tabindex="0"
+                    data-panel-group-direction="vertical"
+                    data-panel-group-id=":r2R0:"
+                    data-resize-handle=""
+                    data-resize-handle-state="inactive"
+                    data-panel-resize-handle-enabled="true"
+                    data-panel-resize-handle-id=":r2R9:"
+                  ></div>
+                  <div
+                    class="border-t border-tk-elements-app-borderColor"
+                    id="terminal-closed"
+                    style="
+                      flex-basis: 0;
+                      flex-grow: 0;
+                      flex-shrink: 1;
+                      overflow: hidden;
+                    "
+                    data-panel=""
+                    data-panel-collapsible="true"
+                    data-panel-group-id=":r2R0:"
+                    data-panel-id="terminal-closed"
+                    data-panel-size="0.0"
+                  >
+                    <div
+                      class="panel-container bg-tk-elements-app-backgroundColor"
+                    >
+                      <div class="panel-tabs-header overflow-x-hidden">
+                        <div class="panel-title w-full">
+                          <ul
+                            class="flex h-full border-b border-tk-elements-app-borderColor w-full"
+                            role="tablist"
+                            aria-orientation="horizontal"
+                          >
+                            <li>
+                              <button
+                                class="group h-full px-4 flex items-center gap-1.5 whitespace-nowrap text-sm position-relative border-r border-tk-elements-panel-headerTab-borderColor bg-tk-elements-panel-headerTab-backgroundColorActive text-tk-elements-panel-headerTab-textColorActive border-tk-elements-panel-headerTab-borderColorActive shadow-[0px_1px_0px_0px] shadow-tk-elements-panel-headerTab-backgroundColorActive"
+                                title="Output"
+                                aria-selected="true"
+                              >
+                                <span
+                                  class="text-tk-elements-panel-headerTab-iconColor i-ph-newspaper-duotone text-tk-elements-panel-headerTab-iconColorActive"
+                                ></span
+                                >Output
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="h-full overflow-hidden"></div>
+                    </div>
+                  </div>
+                </div>
+                <!--astro:end--></astro-island
+              >
+            </div>
+          </div>
+          <div class="divider" data-astro-cid-xhfupcag></div>
+        </div>
+      </resizable-panel>
+    </main>
+  </body>
+</html>
