@@ -10,7 +10,7 @@ Hey there, and welcome to Vite Plugin tutorial 👋!
 
 In this tutorial we'll go through steps for creating custom Vite plugins. We'll start by creating a custom Vite plugin for loading `.yaml` files.
 
-Our goal is to be able to import `content.yaml` file in the Javascript file and use it as plain Javascript object.
+Our goal is to be able to import `content.yaml` file in a Javascript file and use it as plain Javascript object.
 
 ```js [index.js]
 import content from "./content.yaml";

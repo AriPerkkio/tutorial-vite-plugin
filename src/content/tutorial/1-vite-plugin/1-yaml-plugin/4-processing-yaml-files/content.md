@@ -8,7 +8,7 @@ focus: /vite.config.ts
 
 Our Vite plugin can now recognize `.yaml` files that are being loaded. Next we'll need to add logic for converting the `.yaml` files into Javascript and pass the output from `load` hook.
 
-To get the content of loaded file we'll need to use [`readFileSync`](https://nodejs.org/api/fs.html#fsreadfilesyncpath-options) method from `node:fs`.
+To get the content of requested file we'll need to use [`readFileSync`](https://nodejs.org/api/fs.html#fsreadfilesyncpath-options) method from `node:fs`.
 We can convert the YAML content into Javascript using [`yaml`](https://www.npmjs.com/package/yaml) package. It has a `parse()` function that takes YAML content as `string`.
 
 ```ts
@@ -17,10 +17,10 @@ import { parse } from "yaml";
 
 const content = readFileSync("./content.yaml", "utf8");
 const yaml = parse(content);
-//    ^^^^ [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]
+//    ^^^^ [{ employees: [{ id: 1, ...}, ...], projects: [{ id: 101, ...}] }]
 ```
 
-The `yaml` variable now holds a Javascript object that represents our `content.yaml` contents. To return this from `load` hook, we'll need to serialize it to string with `JSON.stringify`:
+The `yaml` variable now holds a Javascript object that represents our `content.yaml` contents. To return this from `load` hook, we'll need to serialize it to string with [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify):
 
 ```ts
 return {

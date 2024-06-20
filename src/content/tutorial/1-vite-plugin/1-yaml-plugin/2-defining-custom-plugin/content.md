@@ -11,3 +11,7 @@ Plugins can have various properties that are listed in [Plugin API | Vite](https
 Let's start by adding a custom plugin in our Vite configuration. To do this, add a new `plugins` property into the Vite configuration. The `plugins` should be an array.
 
 Inside the `plugins` array, define a new object with `name` `'yaml-plugin'`.
+
+Successfully defined plugin should be reported in the Preview tab:
+
+> Loaded Vite plugins: yaml-plugin ✅
