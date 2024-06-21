@@ -1,6 +1,6 @@
 ---
 type: lesson
-title: importing-yaml-files
+title: Importing YAML files
 focus: /index.js
 ---
 
