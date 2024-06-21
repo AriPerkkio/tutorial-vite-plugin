@@ -10,8 +10,9 @@ Now that we know how environment variables work, let's continue with our custom 
 
 Add an import for the virtual module in `index.js`. At this point it should break our Vite setup but that's fine!
 
-```ts add={1}
+```ts add={1,2} del={3}
 import env from "virtual:tutorial-env";
+const output = env;
 const output = "Initial output";
 
 export default output;
