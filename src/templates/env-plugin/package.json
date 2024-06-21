@@ -1,0 +1,15 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.internal.ts",
+    "build": "vite --config vite.config.internal.ts build",
+    "preview": "vite --config vite.config.internal.ts preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "yaml": "^2.4.5"
+  }
+}
