@@ -8,37 +8,20 @@ focus: /vite.config.ts
 
 Our custom Vite plugin can now intercept `*.yaml` file imports and convert them into Javascript.
 
-<div class="mt-6 p-3 border-1 border-current border-dashed border-rd-md">
-  <div class="mb-3">Source code loads YAML-file:</div>
-  <code>import content from "./some-file.yaml"</code>
-</div>
+Before you head on to create your own plugins for loading some other non-Javascript files, let's summarize what we've done:
 
-<div class="mt-6 w-full text-center">⬇️</div>
+<ol>
+  <li>Source code loads YAML-file: <code class="whitespace-nowrap">import content from "./some-file.yaml"</code>
 
-<div class="mt-6 p-3 border-1 border-current border-dashed border-rd-md">
-  Vite plugin's <code>load()</code> hook intercepts <code>.yaml</code> request
-</div>
+  <li class="mt2">Vite plugin's <code>load()</code> hook intercepts <code>.yaml</code> request</li>
 
-<div class="mt-6 w-full text-center">⬇️</div>
+  <li class="mt2">Contents of requested file are read from file system using <code>readFileSync()</code> from <code>node:fs</code> module</li>
 
-<div class="mt-6 p-3 border-1 border-current border-dashed border-rd-md">
-  Contents of requested file are read from file system using <code>readFileSync()</code> from <code>node:fs</code> module
-</div>
+  <li class="mt2">YAML content is converted into Javascript using <code>parse()</code> from <code>yaml</code> module</li>
 
-<div class="mt-6 w-full text-center">⬇️</div>
+  <li class="mt2">Javascript object is serialized into text using <code>JSON.stringify()</code> and returned as default export from <code>load()</code> hook</li>
 
-<div class="mt-6 p-3 border-1 border-current border-dashed border-rd-md">
-  YAML content is converted into Javascript using <code>parse()</code> from <code>yaml</code> module
-</div>
+  <li class="mt2">Source code successfully loads Javascript object from <code>.yaml</code> file import&nbsp;✅</li>
+</ol>
 
-<div class="mt-6 w-full text-center">⬇️</div>
-
-<div class="mt-6 p-3 border-1 border-current border-dashed border-rd-md">
-  Javascript object is serialized into text using <code>JSON.stringify()</code> and returned as default export from <code>load()</code> hook
-</div>
-
-<div class="mt-6 w-full text-center">⬇️</div>
-
-<div class="mt-6 p-3 border-1 border-current border-dashed border-rd-md">
-  Source code successfully loads Javascript object from <code>.yaml</code> file import ✅
-</div>
+📚 Homework: Build a Vite plugin that can import [`.csv` files](https://en.wikipedia.org/wiki/Comma-separated_values) directly into Javascript. You can even build your own minimal CSV-parser!
