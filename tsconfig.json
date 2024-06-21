@@ -4,13 +4,10 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "jsxImportSource": "react",
+    "strict": false,
     "paths": {
-      "@*": [
-        "src/*"
-      ]
+      "@*": ["src/*"]
     }
   },
-  "exclude": [
-    "dist"
-  ]
+  "exclude": ["dist"]
 }
