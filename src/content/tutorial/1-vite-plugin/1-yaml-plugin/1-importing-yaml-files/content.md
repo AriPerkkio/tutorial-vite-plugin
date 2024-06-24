@@ -6,7 +6,7 @@ focus: /index.js
 
 # Welcome to Vite Plugin tutorial
 
-Hey there, and welcome to Vite Plugin tutorial 👋!
+Hey there, and welcome to Vite Plugin tutorial&nbsp;👋!
 
 In this tutorial we'll go through steps for creating custom Vite plugins. We'll start by creating a custom Vite plugin for loading `.yaml` files.
 
@@ -28,4 +28,4 @@ const content = ["Initial content"];
 export { content };
 ```
 
-At this point we should run into error when Vite fails to load `.yaml` file. ❌
+At this point we should run into error when Vite fails to load `.yaml` file.&nbsp;❌

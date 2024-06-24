@@ -63,4 +63,4 @@ To fix this we'll need to apply the `\0` prefix in the `load()` hook as well:
 }
 ```
 
-The code returned from `load` hook is now visible in the browser! ✅
+The code returned from `load` hook is now visible in the browser!&nbsp;✅

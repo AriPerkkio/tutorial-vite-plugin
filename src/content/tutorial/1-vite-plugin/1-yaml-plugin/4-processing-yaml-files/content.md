@@ -34,4 +34,4 @@ Add required logic to Vite plugin's load hook:
 - Convert contents of `.yaml` file into Javascript using `parse` from `yaml` package
 - Serialize the Javascript object into `string` and return it as default export from the `load` hook
 
-Contents of `content.yaml` should appear in preview as JSON. ✅
+Contents of `content.yaml` should appear in preview as JSON.&nbsp;✅
