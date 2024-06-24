@@ -47,3 +47,5 @@ Next let's open up the terminal and start Vite server while providing an environ
 ```sh
 TUTORIAL_MY_MESSAGE="Hello world" npm run dev
 ```
+
+The passed environment variable should now appear in the preview tab.&nbsp;✅
