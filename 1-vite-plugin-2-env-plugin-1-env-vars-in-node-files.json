@@ -1,0 +1,1 @@
+{"/index.js":"const message = process.env.TUTORIAL_MESSAGE;\n\nconsole.log(`Message is ${message}`);\n"}

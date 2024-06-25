@@ -1,0 +1,1 @@
+{"/index.js":"const output = \"Initial output\";\n\nexport default output;\n","/vite.config.ts":"import { defineConfig } from \"vite\";\n\nexport default defineConfig({\n\n});\n"}

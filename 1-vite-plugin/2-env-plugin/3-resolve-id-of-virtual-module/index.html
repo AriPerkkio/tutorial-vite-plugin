@@ -5,7 +5,7 @@
     <meta name="description" content="TutorialKit" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="Astro v4.10.3" />
-    <title>Vite Plugin / YAML Plugin / Defining custom plugin</title>
+    <title>Vite Plugin / Env Plugin / Resolving id of virtual module</title>
     <script src="/tutorial-vite-plugin/coi-serviceworker.js"></script>
     <link
       rel="icon"
@@ -40,31 +40,26 @@
       [data-astro-transition-scope="astro-jtmjwenq-3"] {
         view-transition-name: astro-jtmjwenq-3;
       }
-
       @layer astro {
         ::view-transition-old(astro-jtmjwenq-3) {
           animation: none;
           opacity: 0;
           mix-blend-mode: normal;
         }
-
         ::view-transition-new(astro-jtmjwenq-3) {
           animation: none;
           mix-blend-mode: normal;
         }
-
         ::view-transition-group(astro-jtmjwenq-3) {
           animation: none;
         }
       }
-
       [data-astro-transition-fallback="old"]
         [data-astro-transition-scope="astro-jtmjwenq-3"],
       [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jtmjwenq-3"] {
         animation: none;
         mix-blend-mode: normal;
       }
-
       [data-astro-transition-fallback="new"]
         [data-astro-transition-scope="astro-jtmjwenq-3"],
       [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jtmjwenq-3"] {
@@ -73,7 +68,6 @@
       }
     </style>
   </head>
-
   <body class="h-full text-black">
     <div id="previews-container"></div>
     <main
@@ -371,24 +365,23 @@
               class="h-full flex flex-col bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor"
             >
               <astro-island
-                uid="2oyHkw"
+                uid="Z8nssK"
                 prefix="r1"
                 component-url="/tutorial-vite-plugin/_astro/NavWrapper.B7NKX6MK.js"
                 component-export="NavWrapper"
                 renderer-url="/tutorial-vite-plugin/_astro/client.BKHx8Gce.js"
-                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"default"],"focus":[0,"/vite.config.ts"],"title":[0,"Defining custom plugin"],"type":[0,"lesson"]}],"id":[0,"2-defining-custom-plugin"],"order":[0,1],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"]}],"Markdown":[0,null],"slug":[0,"2-defining-custom-plugin"],"files":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-files.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"solution":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-solution.json"],[1,[[0,"/vite.config.ts"]]]]],"prev":[0,{"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],"next":[0,{"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}]}],"navList":[1,[[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"],"sections":[1,[[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"],"sections":[1,[[0,{"id":[0,"1-importing-yaml-files"],"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],[0,{"id":[0,"2-defining-custom-plugin"],"title":[0,"Defining custom plugin"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}],[0,{"id":[0,"3-defining-load-hook"],"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}],[0,{"id":[0,"4-processing-yaml-files"],"title":[0,"Processing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"]}],[0,{"id":[0,"5-summarize-yaml-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}]]]}],[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"],"sections":[1,[[0,{"id":[0,"1-env-vars-in-node"],"title":[0,"Environment Variables in Node"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/1-env-vars-in-node"]}],[0,{"id":[0,"2-importing-virtual-module"],"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}],[0,{"id":[0,"3-resolve-id-of-virtual-module"],"title":[0,"Resolving id of virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/3-resolve-id-of-virtual-module"]}],[0,{"id":[0,"4-env-variables-in-load-hook"],"title":[0,"Env variables in load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"]}],[0,{"id":[0,"5-summarize-env-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/5-summarize-env-plugin"]}]]]}]]]}]]]}'
+                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"env-plugin"],"focus":[0,"/vite.config.ts"],"title":[0,"Resolving id of virtual module"],"type":[0,"lesson"]}],"id":[0,"3-resolve-id-of-virtual-module"],"order":[0,2],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"]}],"Markdown":[0,null],"slug":[0,"3-resolve-id-of-virtual-module"],"files":[1,[[0,"1-vite-plugin-2-env-plugin-3-resolve-id-of-virtual-module-files.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"solution":[1,[[0,"1-vite-plugin-2-env-plugin-3-resolve-id-of-virtual-module-solution.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"prev":[0,{"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}],"next":[0,{"title":[0,"Env variables in load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"]}]}],"navList":[1,[[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"],"sections":[1,[[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"],"sections":[1,[[0,{"id":[0,"1-importing-yaml-files"],"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],[0,{"id":[0,"2-defining-custom-plugin"],"title":[0,"Defining custom plugin"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}],[0,{"id":[0,"3-defining-load-hook"],"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}],[0,{"id":[0,"4-processing-yaml-files"],"title":[0,"Processing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"]}],[0,{"id":[0,"5-summarize-yaml-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}]]]}],[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"],"sections":[1,[[0,{"id":[0,"1-env-vars-in-node"],"title":[0,"Environment Variables in Node"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/1-env-vars-in-node"]}],[0,{"id":[0,"2-importing-virtual-module"],"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}],[0,{"id":[0,"3-resolve-id-of-virtual-module"],"title":[0,"Resolving id of virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/3-resolve-id-of-virtual-module"]}],[0,{"id":[0,"4-env-variables-in-load-hook"],"title":[0,"Env variables in load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"]}],[0,{"id":[0,"5-summarize-env-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/5-summarize-env-plugin"]}]]]}]]]}]]]}'
                 ssr=""
                 client="load"
                 opts='{"name":"Nav","value":true}'
                 await-children=""
-              >
-                <header
+                ><header
                   class="grid grid-cols-[auto_minmax(0,1fr)_auto] h-[82px] gap-0.5 py-4 px-1 text-sm"
                 >
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"
+                    href="/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"
                     ><span class="i-ph-arrow-left scale-120"></span
                   ></a>
                   <div class="relative">
@@ -404,10 +397,10 @@
                         >
                           <span>Vite Plugin</span
                           ><span class="_Divider_ccqmw_68">/</span
-                          ><span>YAML Plugin</span
+                          ><span>Env Plugin</span
                           ><span class="_Divider_ccqmw_68">/</span
                           ><strong class="font-semibold"
-                            >Defining custom plugin</strong
+                            >Resolving id of virtual module</strong
                           >
                         </div>
                         <div
@@ -419,64 +412,141 @@
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
+                    href="/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"
                     ><span class="i-ph-arrow-right scale-120"></span
                   ></a>
                 </header>
-                <!--astro:end-->
-              </astro-island>
+                <!--astro:end--></astro-island
+              >
               <div class="h-full overflow-auto scrollbar-transparent p-8">
                 <div
                   class="markdown-content text-tk-elements-content-textColor"
                 >
-                  <h1 id="defining-custom-plugin">Defining custom plugin</h1>
+                  <h1 id="resolving-id-of-virtual-module">
+                    Resolving id of virtual module
+                  </h1>
                   <p>
-                    Plugins can have various properties that are listed in
-                    <a href="https://vitejs.dev/guide/api-plugin.html"
-                      >Plugin API | Vite</a
+                    Our plugin is now able to load the virtual module. But there
+                    are other Vite plugins failing as they also attempt to load
+                    it.
+                  </p>
+                  <p>
+                    To solve this we’ll need to internally mark the virtual
+                    module with a special prefix so that other plugins will know
+                    to skip it. There’s
+                    <a
+                      href="https://vitejs.dev/guide/api-plugin#virtual-modules-convention"
+                      >a convention</a
                     >
-                    documentation. The only
-                    <strong>required property</strong> is <code>name</code>.
+                    of using <code>\0</code> in the internal module ids - let’s
+                    add that!
                   </p>
                   <p>
-                    Let’s start by adding a custom plugin in our Vite
-                    configuration. To do this, add a new
-                    <code>plugins</code> property into the Vite configuration.
-                    The <code>plugins</code> should be an array.
+                    Vite will internally resolve ids for each requested module
+                    using the <code>resolveId</code> hook. Add this to the
+                    plugin:
+                  </p>
+                  <div class="expressive-code">
+                    <link
+                      rel="stylesheet"
+                      href="/tutorial-vite-plugin/_astro/ec.hcu7t.css"
+                    />
+                    <script
+                      type="module"
+                      src="/tutorial-vite-plugin/_astro/ec.3zb7u.js"
+                    ></script>
+                    <figure class="frame">
+                      <figcaption class="header"></figcaption>
+                      <pre
+                        data-language="ts"
+                      ><code><div class="ec-line"><div class="code"><span style="--0:#D4D4D4;--1:#000000">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--1:#000000">  </span></span><span style="--0:#C8C8C8;--1:#000000">name</span><span style="--0:#D4D4D4;--1:#000000">: </span><span style="--0:#CE9178;--1:#A31515">"env-plugin"</span><span style="--0:#D4D4D4;--1:#000000">,</span></div></div><div class="ec-line highlight ins"><div class="code"><span class="indent">  </span><span style="--0:#DCDCAA;--1:#664f20">resolveId</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000">) { },</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#DCDCAA;--1:#795E26">load</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000">, </span><span style="--0:#9CDCFE;--1:#001080">options</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C586C0;--1:#AC00D8">if</span><span style="--0:#D4D4D4;--1:#000000"> (</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000"> === </span><span style="--0:#CE9178;--1:#A31515">"virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#C586C0;--1:#AC00D8">return</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"export default 'This should work 🤔'"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">    </span></span><span style="--0:#D4D4D4;--1:#000000">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">  </span></span><span style="--0:#D4D4D4;--1:#000000">},</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D4D4D4;--1:#000000">}</span></div></div></code></pre>
+                      <div class="copy">
+                        <button
+                          title="Copy to clipboard"
+                          data-copied="Copied!"
+                          data-code="{  name: &#x22;env-plugin&#x22;,  resolveId(id) { },  load(id, options) {    if (id === &#x22;virtual:tutorial-env&#x22;) {      return &#x22;export default &#x27;This should work 🤔&#x27;&#x22;;    }  },}"
+                        >
+                          <div></div>
+                        </button>
+                      </div>
+                    </figure>
+                  </div>
+                  <p>
+                    Next we’ll need to use the special <code>\0</code> prefix in
+                    the resolved id. We can simply look for our virtual module’s
+                    entrypoint and return that with the prefix:
+                  </p>
+                  <div class="expressive-code">
+                    <figure class="frame">
+                      <figcaption class="header"></figcaption>
+                      <pre
+                        data-language="ts"
+                      ><code><div class="ec-line"><div class="code"><span style="--0:#D4D4D4;--1:#000000">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--1:#000000">  </span></span><span style="--0:#C8C8C8;--1:#000000">name</span><span style="--0:#D4D4D4;--1:#000000">: </span><span style="--0:#CE9178;--1:#A31515">"env-plugin"</span><span style="--0:#D4D4D4;--1:#000000">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#DCDCAA;--1:#795E26">resolveId</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C586C0;--1:#AC00D8">if</span><span style="--0:#D4D4D4;--1:#000000"> (</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000"> === </span><span style="--0:#CE9178;--1:#A31515">"virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#C586C0;--1:#AC00D8">return</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"</span><span style="--0:#D7BA7D;--1:#D40000">\0</span><span style="--0:#CE9178;--1:#A31515">virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">    </span></span><span style="--0:#D4D4D4;--1:#000000">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">  </span></span><span style="--0:#D4D4D4;--1:#000000">},</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#DCDCAA;--1:#795E26">load</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000">, </span><span style="--0:#9CDCFE;--1:#001080">options</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C586C0;--1:#AC00D8">if</span><span style="--0:#D4D4D4;--1:#000000"> (</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000"> === </span><span style="--0:#CE9178;--1:#A31515">"virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#C586C0;--1:#AC00D8">return</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"export default 'This should work 🤔'"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">    </span></span><span style="--0:#D4D4D4;--1:#000000">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">  </span></span><span style="--0:#D4D4D4;--1:#000000">},</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D4D4D4;--1:#000000">}</span></div></div></code></pre>
+                      <div class="copy">
+                        <button
+                          title="Copy to clipboard"
+                          data-copied="Copied!"
+                          data-code="{  name: &#x22;env-plugin&#x22;,  resolveId(id) {    if (id === &#x22;virtual:tutorial-env&#x22;) {      return &#x22;\0virtual:tutorial-env&#x22;;    }  },  load(id, options) {    if (id === &#x22;virtual:tutorial-env&#x22;) {      return &#x22;export default &#x27;This should work 🤔&#x27;&#x22;;    }  },}"
+                        >
+                          <div></div>
+                        </button>
+                      </div>
+                    </figure>
+                  </div>
+                  <p>
+                    Perfect - the error from Vite’s internal
+                    <code>plugin:vite:import-analysis</code> is now gone! But
+                    <code>index.js</code> still fails to load.
                   </p>
                   <p>
-                    Inside the <code>plugins</code> array, define a new object
-                    with <code>name</code> <code>'yaml-plugin'</code>.
+                    To fix this we’ll need to apply the <code>\0</code> prefix
+                    in the <code>load()</code> hook as well:
                   </p>
+                  <div class="expressive-code">
+                    <figure class="frame">
+                      <figcaption class="header"></figcaption>
+                      <pre
+                        data-language="ts"
+                      ><code><div class="ec-line"><div class="code"><span style="--0:#D4D4D4;--1:#000000">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--1:#000000">  </span></span><span style="--0:#C8C8C8;--1:#000000">name</span><span style="--0:#D4D4D4;--1:#000000">: </span><span style="--0:#CE9178;--1:#A31515">"env-plugin"</span><span style="--0:#D4D4D4;--1:#000000">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#DCDCAA;--1:#795E26">resolveId</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C586C0;--1:#AC00D8">if</span><span style="--0:#D4D4D4;--1:#000000"> (</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000"> === </span><span style="--0:#CE9178;--1:#A31515">"virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#C586C0;--1:#AC00D8">return</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"</span><span style="--0:#D7BA7D;--1:#D40000">\0</span><span style="--0:#CE9178;--1:#A31515">virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">    </span></span><span style="--0:#D4D4D4;--1:#000000">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">  </span></span><span style="--0:#D4D4D4;--1:#000000">},</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#DCDCAA;--1:#795E26">load</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000">, </span><span style="--0:#9CDCFE;--1:#001080">options</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line highlight ins"><div class="code"><span class="indent">    </span><span style="--0:#d09dcc;--1:#8c00b0">if</span><span style="--0:#D4D4D4;--1:#000000"> (</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000"> === </span><span style="--0:#d5a18c;--1:#A31515">"</span><span style="--0:#D7BA7D;--1:#ac0000">\0</span><span style="--0:#d5a18c;--1:#A31515">virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line highlight del"><div class="code"><span class="indent">    </span><span style="--0:#cf9bcb;--1:#8900ac">if</span><span style="--0:#D4D4D4;--1:#000000"> (</span><span style="--0:#9CDCFE;--1:#001080">id</span><span style="--0:#D4D4D4;--1:#000000"> === </span><span style="--0:#d5a08b;--1:#A31515">"virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">) {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#C586C0;--1:#AC00D8">return</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"export default 'This should work 🤔'"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">    </span></span><span style="--0:#D4D4D4;--1:#000000">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D4D4D4;--1:#000000">  </span></span><span style="--0:#D4D4D4;--1:#000000">},</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D4D4D4;--1:#000000">}</span></div></div></code></pre>
+                      <div class="copy">
+                        <button
+                          title="Copy to clipboard"
+                          data-copied="Copied!"
+                          data-code="{  name: &#x22;env-plugin&#x22;,  resolveId(id) {    if (id === &#x22;virtual:tutorial-env&#x22;) {      return &#x22;\0virtual:tutorial-env&#x22;;    }  },  load(id, options) {    if (id === &#x22;\0virtual:tutorial-env&#x22;) {    if (id === &#x22;virtual:tutorial-env&#x22;) {      return &#x22;export default &#x27;This should work 🤔&#x27;&#x22;;    }  },}"
+                        >
+                          <div></div>
+                        </button>
+                      </div>
+                    </figure>
+                  </div>
                   <p>
-                    Successfully defined plugin should be reported in the
-                    Preview tab:
+                    The code returned from <code>load</code> hook is now visible
+                    in the browser! ✅
                   </p>
-                  <blockquote>
-                    <p>Loaded Vite plugins: yaml-plugin ✅</p>
-                  </blockquote>
                 </div>
                 <div class="grid grid-cols-[1fr_1fr] gap-4 mt-8">
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"
+                      href="/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-left pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"
                       ></span>
-                      <span class="line-clamp-2">Importing YAML files</span>
+                      <span class="line-clamp-2">Importing virtual module</span>
                     </a>
                   </div>
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer text-right items-end"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
+                      href="/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-right pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"
                       ></span>
-                      <span class="line-clamp-2">Defining load hook</span>
+                      <span class="line-clamp-2"
+                        >Env variables in load hook</span
+                      >
                     </a>
                   </div>
                 </div>
@@ -486,19 +556,18 @@
           <div class="panel" data-astro-cid-6uew3run>
             <div class="h-full border-l border-tk-elements-app-borderColor">
               <astro-island
-                uid="QI0Hw"
+                uid="8Cf2C"
                 prefix="r2"
                 component-url="/tutorial-vite-plugin/_astro/WorkspacePanelWrapper.Cuii6WZ3.js"
                 component-export="WorkspacePanelWrapper"
                 renderer-url="/tutorial-vite-plugin/_astro/client.BKHx8Gce.js"
-                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"default"],"focus":[0,"/vite.config.ts"],"title":[0,"Defining custom plugin"],"type":[0,"lesson"]}],"id":[0,"2-defining-custom-plugin"],"order":[0,1],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"]}],"Markdown":[0,null],"slug":[0,"2-defining-custom-plugin"],"files":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-files.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"solution":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-solution.json"],[1,[[0,"/vite.config.ts"]]]]],"prev":[0,{"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],"next":[0,{"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}]}],"data-astro-transition-persist":[0,"astro-jzrl3qot-1"]}'
+                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"env-plugin"],"focus":[0,"/vite.config.ts"],"title":[0,"Resolving id of virtual module"],"type":[0,"lesson"]}],"id":[0,"3-resolve-id-of-virtual-module"],"order":[0,2],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"]}],"Markdown":[0,null],"slug":[0,"3-resolve-id-of-virtual-module"],"files":[1,[[0,"1-vite-plugin-2-env-plugin-3-resolve-id-of-virtual-module-files.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"solution":[1,[[0,"1-vite-plugin-2-env-plugin-3-resolve-id-of-virtual-module-solution.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"prev":[0,{"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}],"next":[0,{"title":[0,"Env variables in load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"]}]}],"data-astro-transition-persist":[0,"astro-jzrl3qot-1"]}'
                 ssr=""
                 client="load"
                 opts='{"name":"WorkspacePanel","value":true}'
                 data-astro-transition-persist="astro-jzrl3qot-1"
                 await-children=""
-              >
-                <div
+                ><div
                   class=""
                   style="
                     display: flex;
@@ -757,8 +826,8 @@
                     </div>
                   </div>
                 </div>
-                <!--astro:end-->
-              </astro-island>
+                <!--astro:end--></astro-island
+              >
             </div>
           </div>
           <div class="divider" data-astro-cid-6uew3run></div>

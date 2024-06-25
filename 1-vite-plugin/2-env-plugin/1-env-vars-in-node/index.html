@@ -5,7 +5,7 @@
     <meta name="description" content="TutorialKit" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="Astro v4.10.3" />
-    <title>Vite Plugin / YAML Plugin / Defining custom plugin</title>
+    <title>Vite Plugin / Env Plugin / Environment Variables in Node</title>
     <script src="/tutorial-vite-plugin/coi-serviceworker.js"></script>
     <link
       rel="icon"
@@ -40,31 +40,26 @@
       [data-astro-transition-scope="astro-jtmjwenq-3"] {
         view-transition-name: astro-jtmjwenq-3;
       }
-
       @layer astro {
         ::view-transition-old(astro-jtmjwenq-3) {
           animation: none;
           opacity: 0;
           mix-blend-mode: normal;
         }
-
         ::view-transition-new(astro-jtmjwenq-3) {
           animation: none;
           mix-blend-mode: normal;
         }
-
         ::view-transition-group(astro-jtmjwenq-3) {
           animation: none;
         }
       }
-
       [data-astro-transition-fallback="old"]
         [data-astro-transition-scope="astro-jtmjwenq-3"],
       [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jtmjwenq-3"] {
         animation: none;
         mix-blend-mode: normal;
       }
-
       [data-astro-transition-fallback="new"]
         [data-astro-transition-scope="astro-jtmjwenq-3"],
       [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jtmjwenq-3"] {
@@ -73,7 +68,6 @@
       }
     </style>
   </head>
-
   <body class="h-full text-black">
     <div id="previews-container"></div>
     <main
@@ -371,24 +365,23 @@
               class="h-full flex flex-col bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor"
             >
               <astro-island
-                uid="2oyHkw"
+                uid="a1rGb"
                 prefix="r1"
                 component-url="/tutorial-vite-plugin/_astro/NavWrapper.B7NKX6MK.js"
                 component-export="NavWrapper"
                 renderer-url="/tutorial-vite-plugin/_astro/client.BKHx8Gce.js"
-                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"default"],"focus":[0,"/vite.config.ts"],"title":[0,"Defining custom plugin"],"type":[0,"lesson"]}],"id":[0,"2-defining-custom-plugin"],"order":[0,1],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"]}],"Markdown":[0,null],"slug":[0,"2-defining-custom-plugin"],"files":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-files.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"solution":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-solution.json"],[1,[[0,"/vite.config.ts"]]]]],"prev":[0,{"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],"next":[0,{"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}]}],"navList":[1,[[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"],"sections":[1,[[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"],"sections":[1,[[0,{"id":[0,"1-importing-yaml-files"],"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],[0,{"id":[0,"2-defining-custom-plugin"],"title":[0,"Defining custom plugin"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}],[0,{"id":[0,"3-defining-load-hook"],"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}],[0,{"id":[0,"4-processing-yaml-files"],"title":[0,"Processing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"]}],[0,{"id":[0,"5-summarize-yaml-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}]]]}],[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"],"sections":[1,[[0,{"id":[0,"1-env-vars-in-node"],"title":[0,"Environment Variables in Node"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/1-env-vars-in-node"]}],[0,{"id":[0,"2-importing-virtual-module"],"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}],[0,{"id":[0,"3-resolve-id-of-virtual-module"],"title":[0,"Resolving id of virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/3-resolve-id-of-virtual-module"]}],[0,{"id":[0,"4-env-variables-in-load-hook"],"title":[0,"Env variables in load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"]}],[0,{"id":[0,"5-summarize-env-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/5-summarize-env-plugin"]}]]]}]]]}]]]}'
+                props='{"lesson":[0,{"data":[0,{"mainCommand":[0,""],"prepareCommands":[1,[]],"previews":[0,false],"template":[0,"empty"],"terminal":[0,{"panels":[1,[[1,[[0,"terminal"],[0,"Terminal"]]]]],"activePanel":[0,1]}],"focus":[0,"/index.js"],"title":[0,"Environment Variables in Node"],"type":[0,"lesson"]}],"id":[0,"1-env-vars-in-node"],"order":[0,0],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"]}],"Markdown":[0,null],"slug":[0,"1-env-vars-in-node"],"files":[1,[[0,"1-vite-plugin-2-env-plugin-1-env-vars-in-node-files.json"],[1,[[0,"/index.js"]]]]],"solution":[1,[[0,"1-vite-plugin-2-env-plugin-1-env-vars-in-node-solution.json"],[1,[]]]],"prev":[0,{"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}],"next":[0,{"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}]}],"navList":[1,[[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"],"sections":[1,[[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"],"sections":[1,[[0,{"id":[0,"1-importing-yaml-files"],"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],[0,{"id":[0,"2-defining-custom-plugin"],"title":[0,"Defining custom plugin"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/2-defining-custom-plugin"]}],[0,{"id":[0,"3-defining-load-hook"],"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}],[0,{"id":[0,"4-processing-yaml-files"],"title":[0,"Processing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/4-processing-yaml-files"]}],[0,{"id":[0,"5-summarize-yaml-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}]]]}],[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"],"sections":[1,[[0,{"id":[0,"1-env-vars-in-node"],"title":[0,"Environment Variables in Node"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/1-env-vars-in-node"]}],[0,{"id":[0,"2-importing-virtual-module"],"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}],[0,{"id":[0,"3-resolve-id-of-virtual-module"],"title":[0,"Resolving id of virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/3-resolve-id-of-virtual-module"]}],[0,{"id":[0,"4-env-variables-in-load-hook"],"title":[0,"Env variables in load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/4-env-variables-in-load-hook"]}],[0,{"id":[0,"5-summarize-env-plugin"],"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/5-summarize-env-plugin"]}]]]}]]]}]]]}'
                 ssr=""
                 client="load"
                 opts='{"name":"Nav","value":true}'
                 await-children=""
-              >
-                <header
+                ><header
                   class="grid grid-cols-[auto_minmax(0,1fr)_auto] h-[82px] gap-0.5 py-4 px-1 text-sm"
                 >
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"
+                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"
                     ><span class="i-ph-arrow-left scale-120"></span
                   ></a>
                   <div class="relative">
@@ -404,10 +397,10 @@
                         >
                           <span>Vite Plugin</span
                           ><span class="_Divider_ccqmw_68">/</span
-                          ><span>YAML Plugin</span
+                          ><span>Env Plugin</span
                           ><span class="_Divider_ccqmw_68">/</span
                           ><strong class="font-semibold"
-                            >Defining custom plugin</strong
+                            >Environment Variables in Node</strong
                           >
                         </div>
                         <div
@@ -419,64 +412,141 @@
                   <a
                     class="flex cursor-pointer h-full items-center justify-center w-[40px] text-tk-elements-breadcrumbs-navButton-iconColor hover:text-tk-elements-breadcrumbs-navButton-iconColorHover"
                     aria-disabled="false"
-                    href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
+                    href="/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"
                     ><span class="i-ph-arrow-right scale-120"></span
                   ></a>
                 </header>
-                <!--astro:end-->
-              </astro-island>
+                <!--astro:end--></astro-island
+              >
               <div class="h-full overflow-auto scrollbar-transparent p-8">
                 <div
                   class="markdown-content text-tk-elements-content-textColor"
                 >
-                  <h1 id="defining-custom-plugin">Defining custom plugin</h1>
+                  <h1 id="vite-env-plugin">Vite Env plugin</h1>
                   <p>
-                    Plugins can have various properties that are listed in
-                    <a href="https://vitejs.dev/guide/api-plugin.html"
-                      >Plugin API | Vite</a
-                    >
-                    documentation. The only
-                    <strong>required property</strong> is <code>name</code>.
+                    In this part we’ll be creating a plugin that allows us to
+                    use environment variables from virtual module. By “virtual”
+                    we mean a module that doesn’t really exist on file system
+                    but is provided by a Vite plugin in runtime.
                   </p>
                   <p>
-                    Let’s start by adding a custom plugin in our Vite
-                    configuration. To do this, add a new
-                    <code>plugins</code> property into the Vite configuration.
-                    The <code>plugins</code> should be an array.
+                    We’ll be defining a module entrypoint for
+                    <code>"virtual:tutorial-env"</code>. Note that
+                    <code>virtual:</code> is a
+                    <a
+                      href="https://vitejs.dev/guide/api-plugin#virtual-modules-convention"
+                      >convention of Vite virtual modules</a
+                    >.
                   </p>
+                  <div class="expressive-code">
+                    <link
+                      rel="stylesheet"
+                      href="/tutorial-vite-plugin/_astro/ec.hcu7t.css"
+                    />
+                    <script
+                      type="module"
+                      src="/tutorial-vite-plugin/_astro/ec.3zb7u.js"
+                    ></script>
+                    <figure class="frame">
+                      <figcaption class="header"></figcaption>
+                      <pre
+                        data-language="ts"
+                      ><code><div class="ec-line"><div class="code"><span style="--0:#C586C0;--1:#AC00D8">import</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#9CDCFE;--1:#001080">env</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#C586C0;--1:#AC00D8">from</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">"virtual:tutorial-env"</span><span style="--0:#D4D4D4;--1:#000000">;</span></div></div></code></pre>
+                      <div class="copy">
+                        <button
+                          title="Copy to clipboard"
+                          data-copied="Copied!"
+                          data-code="import env from &#x22;virtual:tutorial-env&#x22;;"
+                        >
+                          <div></div>
+                        </button>
+                      </div>
+                    </figure>
+                  </div>
                   <p>
-                    Inside the <code>plugins</code> array, define a new object
-                    with <code>name</code> <code>'yaml-plugin'</code>.
+                    But first let’s take a look at how environment variables
+                    work in Node.
                   </p>
+                  <ul>
+                    <li>
+                      <p>
+                        On Unix systems environment variables can be passed to
+                        commands by defining them before command itself
+                      </p>
+                      <div class="expressive-code">
+                        <figure class="frame is-terminal">
+                          <figcaption class="header">
+                            <span class="title"></span
+                            ><span class="sr-only">Terminal window</span>
+                          </figcaption>
+                          <pre
+                            data-language="sh"
+                          ><code><div class="ec-line"><div class="code"><span style="--0:#9CDCFE;--1:#001080">TUTORIAL_MESSAGE</span><span style="--0:#D4D4D4;--1:#000000">=</span><span style="--0:#CE9178;--1:#A31515">Hello</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#DCDCAA;--1:#795E26">node</span><span style="--0:#D4D4D4;--1:#000000"> </span><span style="--0:#CE9178;--1:#A31515">index.js</span></div></div></code></pre>
+                          <div class="copy">
+                            <button
+                              title="Copy to clipboard"
+                              data-copied="Copied!"
+                              data-code="TUTORIAL_MESSAGE=Hello node index.js"
+                            >
+                              <div></div>
+                            </button>
+                          </div>
+                        </figure>
+                      </div>
+                    </li>
+                  </ul>
+                  <br aria-hidden="" />
+                  <ul>
+                    <li>
+                      Environments variables are available in
+                      <a href="https://nodejs.org/api/process.html#processenv"
+                        ><code>process.env</code></a
+                      >
+                      <div class="expressive-code">
+                        <figure class="frame">
+                          <figcaption class="header"></figcaption>
+                          <pre
+                            data-language="js"
+                          ><code><div class="ec-line"><div class="code"><span style="--0:#9CDCFE;--1:#001080">console</span><span style="--0:#D4D4D4;--1:#000000">.</span><span style="--0:#DCDCAA;--1:#795E26">log</span><span style="--0:#D4D4D4;--1:#000000">(</span><span style="--0:#9CDCFE;--1:#001080">process</span><span style="--0:#D4D4D4;--1:#000000">.</span><span style="--0:#9CDCFE;--1:#001080">env</span><span style="--0:#D4D4D4;--1:#000000">.</span><span style="--0:#4FC1FF;--1:#006BB8">TUTORIAL_MESSAGE</span><span style="--0:#D4D4D4;--1:#000000">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#74A061;--1:#007A00">// Hello</span></div></div></code></pre>
+                          <div class="copy">
+                            <button
+                              title="Copy to clipboard"
+                              data-copied="Copied!"
+                              data-code="console.log(process.env.TUTORIAL_MESSAGE);// Hello"
+                            >
+                              <div></div>
+                            </button>
+                          </div>
+                        </figure>
+                      </div>
+                    </li>
+                  </ul>
                   <p>
-                    Successfully defined plugin should be reported in the
-                    Preview tab:
+                    Try passing a different value to
+                    <code>node ./index.js</code> in the terminal.
                   </p>
-                  <blockquote>
-                    <p>Loaded Vite plugins: yaml-plugin ✅</p>
-                  </blockquote>
                 </div>
                 <div class="grid grid-cols-[1fr_1fr] gap-4 mt-8">
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"
+                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-left pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"
                       ></span>
-                      <span class="line-clamp-2">Importing YAML files</span>
+                      <span class="line-clamp-2">Summary</span>
                     </a>
                   </div>
                   <div class="flex">
                     <a
                       class="content-nav-card group flex flex-col bg-tk-elements-navCard-backgroundColor hover:bg-tk-elements-navCard-backgroundColorHover flex-1 p-4 border border-tk-elements-navCard-borderColor hover:border-tk-elements-navCard-borderColorHover text-tk-elements-navCard-textColor hover:text-tk-elements-navCard-textColorHover rounded-md cursor-pointer text-right items-end"
-                      href="/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"
+                      href="/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"
                     >
                       <span
                         class="icon text-tk-elements-navCard-iconColor i-ph-arrow-right pointer-events-none h-7 w-7 mb-2 group-hover:text-tk-elements-navCard-iconColorHover"
                       ></span>
-                      <span class="line-clamp-2">Defining load hook</span>
+                      <span class="line-clamp-2">Importing virtual module</span>
                     </a>
                   </div>
                 </div>
@@ -486,19 +556,18 @@
           <div class="panel" data-astro-cid-6uew3run>
             <div class="h-full border-l border-tk-elements-app-borderColor">
               <astro-island
-                uid="QI0Hw"
+                uid="Z1XB1c6"
                 prefix="r2"
                 component-url="/tutorial-vite-plugin/_astro/WorkspacePanelWrapper.Cuii6WZ3.js"
                 component-export="WorkspacePanelWrapper"
                 renderer-url="/tutorial-vite-plugin/_astro/client.BKHx8Gce.js"
-                props='{"lesson":[0,{"data":[0,{"mainCommand":[1,[[0,"npm run dev"],[0,"Starting http server"]]],"prepareCommands":[1,[[1,[[0,"npm install"],[0,"Installing dependencies"]]]]],"template":[0,"default"],"focus":[0,"/vite.config.ts"],"title":[0,"Defining custom plugin"],"type":[0,"lesson"]}],"id":[0,"2-defining-custom-plugin"],"order":[0,1],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"1-yaml-plugin"],"title":[0,"YAML Plugin"]}],"Markdown":[0,null],"slug":[0,"2-defining-custom-plugin"],"files":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-files.json"],[1,[[0,"/index.js"],[0,"/vite.config.ts"]]]]],"solution":[1,[[0,"1-vite-plugin-1-yaml-plugin-2-defining-custom-plugin-solution.json"],[1,[[0,"/vite.config.ts"]]]]],"prev":[0,{"title":[0,"Importing YAML files"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/1-importing-yaml-files"]}],"next":[0,{"title":[0,"Defining load hook"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/3-defining-load-hook"]}]}],"data-astro-transition-persist":[0,"astro-jzrl3qot-1"]}'
+                props='{"lesson":[0,{"data":[0,{"mainCommand":[0,""],"prepareCommands":[1,[]],"previews":[0,false],"template":[0,"empty"],"terminal":[0,{"panels":[1,[[1,[[0,"terminal"],[0,"Terminal"]]]]],"activePanel":[0,1]}],"focus":[0,"/index.js"],"title":[0,"Environment Variables in Node"],"type":[0,"lesson"]}],"id":[0,"1-env-vars-in-node"],"order":[0,0],"part":[0,{"id":[0,"1-vite-plugin"],"title":[0,"Vite Plugin"]}],"chapter":[0,{"id":[0,"2-env-plugin"],"title":[0,"Env Plugin"]}],"Markdown":[0,null],"slug":[0,"1-env-vars-in-node"],"files":[1,[[0,"1-vite-plugin-2-env-plugin-1-env-vars-in-node-files.json"],[1,[[0,"/index.js"]]]]],"solution":[1,[[0,"1-vite-plugin-2-env-plugin-1-env-vars-in-node-solution.json"],[1,[]]]],"prev":[0,{"title":[0,"Summary"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/1-yaml-plugin/5-summarize-yaml-plugin"]}],"next":[0,{"title":[0,"Importing virtual module"],"href":[0,"/tutorial-vite-plugin/1-vite-plugin/2-env-plugin/2-importing-virtual-module"]}]}],"data-astro-transition-persist":[0,"astro-jzrl3qot-1"]}'
                 ssr=""
                 client="load"
                 opts='{"name":"WorkspacePanel","value":true}'
                 data-astro-transition-persist="astro-jzrl3qot-1"
                 await-children=""
-              >
-                <div
+                ><div
                   class=""
                   style="
                     display: flex;
@@ -572,15 +641,7 @@
                             <div
                               class="scale-120 shrink-0 i-ph-file-duotone text-tk-elements-fileTree-file-iconColor group-hover:text-tk-elements-fileTree-file-iconColorHover"
                             ></div>
-                            <span>index.js</span></button
-                          ><button
-                            class="flex items-center gap-2 w-full pr-2 border-2 border-transparent text-faded group bg-tk-elements-fileTree-file-backgroundColor hover:bg-tk-elements-fileTree-file-backgroundColorHover text-tk-elements-fileTree-file-textColor hover:text-tk-elements-fileTree-file-textColorHover"
-                            style="padding-left: 12px"
-                          >
-                            <div
-                              class="scale-120 shrink-0 i-ph-file-duotone text-tk-elements-fileTree-file-iconColor group-hover:text-tk-elements-fileTree-file-iconColorHover"
-                            ></div>
-                            <span>vite.config.ts</span>
+                            <span>index.js</span>
                           </button>
                         </div>
                       </div>
@@ -645,17 +706,18 @@
                   ></div>
                   <div
                     class="border-t border-tk-elements-app-borderColor"
-                    id="previews-opened"
+                    id="previews-closed"
                     style="
                       flex-basis: 0;
-                      flex-grow: 50;
+                      flex-grow: 0;
                       flex-shrink: 1;
                       overflow: hidden;
                     "
                     data-panel=""
+                    data-panel-collapsible="true"
                     data-panel-group-id=":r2R0:"
-                    data-panel-id="previews-opened"
-                    data-panel-size="50.0"
+                    data-panel-id="previews-closed"
+                    data-panel-size="0.0"
                   >
                     <div class="flex flex-col h-full w-full">
                       <div
@@ -678,26 +740,7 @@
                       <div
                         class="flex-grow w-full flex justify-center items-center text-sm bg-tk-elements-app-backgroundColor text-tk-elements-app-textColor"
                       >
-                        <ul class="space-y-1">
-                          <li class="flex items-center">
-                            <div
-                              class="inline-block mr-2 i-ph-circle-duotone scale-120 text-tk-elements-status-disabled-iconColor"
-                            ></div>
-                            <span
-                              class="text-tk-elements-status-disabled-textColor"
-                              >Installing dependencies</span
-                            >
-                          </li>
-                          <li class="flex items-center">
-                            <div
-                              class="inline-block mr-2 i-ph-circle-duotone scale-120 text-tk-elements-status-disabled-iconColor"
-                            ></div>
-                            <span
-                              class="text-tk-elements-status-disabled-textColor"
-                              >Starting http server</span
-                            >
-                          </li>
-                        </ul>
+                        No preview to run nor steps to show
                       </div>
                     </div>
                   </div>
@@ -710,23 +753,22 @@
                     data-panel-group-id=":r2R0:"
                     data-resize-handle=""
                     data-resize-handle-state="inactive"
-                    data-panel-resize-handle-enabled="true"
+                    data-panel-resize-handle-enabled="false"
                     data-panel-resize-handle-id=":r2R9:"
                   ></div>
                   <div
-                    class="border-t border-tk-elements-app-borderColor"
-                    id="terminal-closed"
+                    class=""
+                    id="terminal-opened"
                     style="
                       flex-basis: 0;
-                      flex-grow: 0;
+                      flex-grow: 25;
                       flex-shrink: 1;
                       overflow: hidden;
                     "
                     data-panel=""
-                    data-panel-collapsible="true"
                     data-panel-group-id=":r2R0:"
-                    data-panel-id="terminal-closed"
-                    data-panel-size="0.0"
+                    data-panel-id="terminal-opened"
+                    data-panel-size="25.0"
                   >
                     <div
                       class="panel-container bg-tk-elements-app-backgroundColor"
@@ -741,13 +783,13 @@
                             <li>
                               <button
                                 class="group h-full px-4 flex items-center gap-1.5 whitespace-nowrap text-sm position-relative border-r border-tk-elements-panel-headerTab-borderColor bg-tk-elements-panel-headerTab-backgroundColorActive text-tk-elements-panel-headerTab-textColorActive border-tk-elements-panel-headerTab-borderColorActive shadow-[0px_1px_0px_0px] shadow-tk-elements-panel-headerTab-backgroundColorActive"
-                                title="Output"
+                                title="Terminal"
                                 aria-selected="true"
                               >
                                 <span
-                                  class="text-tk-elements-panel-headerTab-iconColor i-ph-newspaper-duotone text-tk-elements-panel-headerTab-iconColorActive"
+                                  class="text-tk-elements-panel-headerTab-iconColor i-ph-terminal-window-duotone text-tk-elements-panel-headerTab-iconColorActive"
                                 ></span
-                                >Output
+                                >Terminal
                               </button>
                             </li>
                           </ul>
@@ -757,8 +799,8 @@
                     </div>
                   </div>
                 </div>
-                <!--astro:end-->
-              </astro-island>
+                <!--astro:end--></astro-island
+              >
             </div>
           </div>
           <div class="divider" data-astro-cid-6uew3run></div>
