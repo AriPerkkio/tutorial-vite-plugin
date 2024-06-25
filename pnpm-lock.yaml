@@ -49,6 +49,9 @@ devDependencies:
   fast-glob:
     specifier: ^3.3.2
     version: 3.3.2
+  magic-string:
+    specifier: ^0.30.10
+    version: 0.30.10
   prettier-plugin-astro:
     specifier: ^0.13.0
     version: 0.13.0
