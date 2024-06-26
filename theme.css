@@ -105,6 +105,9 @@
   --tk-elements-app-linkColor: var(--vp-c-brand-1);
   --tk-elements-app-borderColor: var(--vp-c-border);
 
+  --tk-elements-content-textColor: var(--vp-c-text-1);
+  --tk-elements-content-headingTextColor: var(--vp-c-text-1);
+
   --tk-elements-fileTree-backgroundColor: var(--vp-c-bg);
   --tk-elements-fileTree-file-backgroundColor: var(--vp-c-bg);
   --tk-elements-fileTree-file-textColor: var(--vp-c-brand-1);
