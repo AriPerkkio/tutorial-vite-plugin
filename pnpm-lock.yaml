@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tutorialkit/components-react':
-    specifier: 0.0.1-alpha.22
-    version: 0.0.1-alpha.22(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)
+    specifier: 0.0.1-alpha.23
+    version: 0.0.1-alpha.23(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -29,11 +29,11 @@ devDependencies:
     specifier: ^1.1.2
     version: 1.1.2
   '@tutorialkit/astro':
-    specifier: 0.0.1-alpha.22
-    version: 0.0.1-alpha.22(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1)
+    specifier: 0.0.1-alpha.23
+    version: 0.0.1-alpha.23(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1)
   '@tutorialkit/types':
-    specifier: 0.0.1-alpha.22
-    version: 0.0.1-alpha.22
+    specifier: 0.0.1-alpha.23
+    version: 0.0.1-alpha.23
   '@types/node':
     specifier: ^20.12.7
     version: 20.14.5
@@ -703,6 +703,14 @@ packages:
       '@lezer/sass': 1.0.6
     transitivePeerDependencies:
       - '@codemirror/view'
+
+  /@codemirror/lang-wast@6.0.2:
+    resolution: {integrity: sha512-Imi2KTpVGm7TKuUkqyJ5NRmeFWF7aMpNiwHnLQe0x9kmrxElndyH0K6H/gXtWwY6UshMRAhpENsgfpSwsgmC6Q==}
+    dependencies:
+      '@codemirror/language': 6.10.2
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/lr': 1.4.1
 
   /@codemirror/language@6.10.2:
     resolution: {integrity: sha512-kgbTYTo0Au6dCSc/TFy7fK3fpJmgHDv1sG1KNQKJXVi+xBTEeBPY/M30YXiU6mMXeH+YIDLsbrT4ZwNRdtF+SA==}
@@ -1793,19 +1801,19 @@ packages:
     resolution: {integrity: sha512-O6j27b7dGmJbR3mjwh/aHH8Ld+GQvA0OQsNO43wKWnqbAae3AYXrhFyScHGX8hXZD6vX2ngjzDFkZY5srtIJbQ==}
     dev: true
 
-  /@tutorialkit/astro@0.0.1-alpha.22(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1):
-    resolution: {integrity: sha512-WTvIOKKFd0NSaC8x7QZ6kaO7hu7xVhEuslEbk4/fJST0GXYud8i4VTav5C/7mR9Mf/9Fn/R9ujmnZyn1OakIJg==}
+  /@tutorialkit/astro@0.0.1-alpha.23(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1):
+    resolution: {integrity: sha512-H/iMMiidRUalF47kTbhvkezjie8YOksaue2YPwW1lLutyuswxMpaNyaU9+ix+EpuTcO4Uv7dgHv7jQd1PQDK4A==}
     peerDependencies:
-      astro: ^4.8.6
+      astro: ^4.10.2
     dependencies:
       '@astrojs/mdx': 3.1.1(astro@4.10.3)
       '@astrojs/react': 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.3.1)
       '@expressive-code/plugin-collapsible-sections': 0.35.3
       '@expressive-code/plugin-line-numbers': 0.35.3
       '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
-      '@tutorialkit/components-react': 0.0.1-alpha.22(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)
-      '@tutorialkit/runtime': 0.0.1-alpha.22
-      '@tutorialkit/types': 0.0.1-alpha.22
+      '@tutorialkit/components-react': 0.0.1-alpha.23(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)
+      '@tutorialkit/runtime': 0.0.1-alpha.23
+      '@tutorialkit/types': 0.0.1-alpha.23
       '@types/react': 18.3.3
       '@webcontainer/api': 1.2.0-beta.3
       astro: 4.10.3(@types/node@20.14.5)(typescript@5.4.5)
@@ -1836,8 +1844,8 @@ packages:
       - vite
     dev: true
 
-  /@tutorialkit/components-react@0.0.1-alpha.22(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1):
-    resolution: {integrity: sha512-MhSk9lIaM/bFOvEns3xgnSYsBSdRS2BgYrzn6VzPpj633R2d0lU9Cjo6E+4XZpjGLDvGUKhVtFHiZeKHFwLYFw==}
+  /@tutorialkit/components-react@0.0.1-alpha.23(@lezer/common@1.2.1)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1):
+    resolution: {integrity: sha512-aJr2YI56R41dwHgzqoR5weoZx8IczCOzZws+fmUHx/OTGz0+CpIWEs8HN0o5Wm3F7gYsKigDkTvhzCKLbDPTXA==}
     dependencies:
       '@codemirror/autocomplete': 6.16.2(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
       '@codemirror/commands': 6.6.0
@@ -1847,13 +1855,14 @@ packages:
       '@codemirror/lang-json': 6.0.1
       '@codemirror/lang-markdown': 6.2.5
       '@codemirror/lang-sass': 6.0.2(@codemirror/view@6.28.1)
+      '@codemirror/lang-wast': 6.0.2
       '@codemirror/language': 6.10.2
       '@codemirror/state': 6.4.1
       '@codemirror/view': 6.28.1
       '@lezer/highlight': 1.2.0
       '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
-      '@tutorialkit/runtime': 0.0.1-alpha.22
+      '@tutorialkit/runtime': 0.0.1-alpha.23
       '@webcontainer/api': 1.2.0-beta.3
       '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
       '@xterm/addon-web-links': 0.11.0(@xterm/xterm@5.5.0)
@@ -1870,15 +1879,15 @@ packages:
       - '@types/react-dom'
       - react-dom
 
-  /@tutorialkit/runtime@0.0.1-alpha.22:
-    resolution: {integrity: sha512-58V5mvVaZqwsI7f2/jFcq5R/UIsp+ab+QofUrpGlP6BG7IPwGcfaMQpPPVb5DKQjJJtwAwO2lmGIvsC94Sf6Hg==}
+  /@tutorialkit/runtime@0.0.1-alpha.23:
+    resolution: {integrity: sha512-4XsClBC7wkCpnC8KuS0UrBiQtWxr9KhA4XJYQBH6dKxZlWVmmRCjbur7xybDanq1NxNionx0/a8VlzIz8mrTYA==}
     dependencies:
-      '@tutorialkit/types': 0.0.1-alpha.22
+      '@tutorialkit/types': 0.0.1-alpha.23
       '@webcontainer/api': 1.2.0-beta.3
       nanostores: 0.10.3
 
-  /@tutorialkit/types@0.0.1-alpha.22:
-    resolution: {integrity: sha512-Ii324TE+/YOP8GlKpVF3UVsHtKix5yUdqRnymUie0uwbcQdOvtAQRNFgt19mwJR3Edg8i1HXM8Dn0OjBVFuSCQ==}
+  /@tutorialkit/types@0.0.1-alpha.23:
+    resolution: {integrity: sha512-hrfDBqjdDTj3iSwYEIO/l7L6orDlBiH9gEDg5XBuK2KZaTcFGoWvpMyyw/XSq+xo++POUvPltoXFGxgXAYRJfw==}
     dependencies:
       zod: 3.23.8
 
