@@ -16,7 +16,7 @@ Our goal is to be able to import `content.yaml` file in a Javascript file and us
 import content from "./content.yaml";
 
 console.log(content);
-// > [{ employees: [{ id: 1, ...}, ...], projects: { id: 101, ...}, ... }]
+// > [{  employees: [{ id: 1, ... }, ...], projects: [{ id: 101, ...}, ...] }]
 ```
 
 Try doing this in `index.js`:
@@ -25,7 +25,7 @@ Try doing this in `index.js`:
 import content from "./content.yaml";
 const content = ["Initial content"];
 
-export { content };
+export default content;
 ```
 
 At this point we should run into error when Vite fails to load `.yaml` file.&nbsp;❌

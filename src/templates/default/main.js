@@ -13,7 +13,7 @@ document.querySelector("#app").innerHTML = `
 import("./index.js")
   .then((mod) => {
     document.getElementById(ID).textContent = JSON.stringify(
-      mod.content,
+      mod.default,
       null,
       2
     );

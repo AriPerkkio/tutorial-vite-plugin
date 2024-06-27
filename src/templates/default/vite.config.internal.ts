@@ -9,6 +9,9 @@ export default mergeConfig(
     define: {
       TUTORIAL_LOADED_VITE_PLUGINS: `"${loadedPlugins || "none"}"`,
     },
+    build: {
+      target: "esnext",
+    },
   }),
   viteConfig
 );

@@ -1,3 +1,3 @@
 const content = ["Initial content"];
 
-export { content };
+export default content;
