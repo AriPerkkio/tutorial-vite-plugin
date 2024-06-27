@@ -30,7 +30,7 @@ function getTutorialEnvVariables() {
 }
 ```
 
-Let's use `getTutorialEnvVariables` in the laod hook to collect all `TUTORIAL_` prefixed environment variables and return them as a object.
+Let's use `getTutorialEnvVariables` in the `load` hook to collect all `TUTORIAL_` prefixed environment variables and return them as a object.
 
 ```ts add={3,4} del={5}
 load(id, options) {
