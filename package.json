@@ -2,6 +2,7 @@
   "name": "tutorial-vite-plugin",
   "version": "0.0.1",
   "type": "module",
+  "packageManager": "pnpm@8.15.8",
   "private": true,
   "scripts": {
     "astro": "astro",
@@ -12,7 +13,7 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@tutorialkit/components-react": "0.0.1-alpha.23",
+    "@tutorialkit/components-react": "0.0.1-alpha.25",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -21,8 +22,9 @@
     "@astrojs/react": "^3.3.4",
     "@iconify-json/ph": "^1.1.12",
     "@iconify-json/svg-spinners": "^1.1.2",
-    "@tutorialkit/astro": "0.0.1-alpha.23",
-    "@tutorialkit/types": "0.0.1-alpha.23",
+    "@tutorialkit/astro": "0.0.1-alpha.25",
+    "@tutorialkit/theme": "0.0.1-alpha.25",
+    "@tutorialkit/types": "0.0.1-alpha.25",
     "@types/node": "^20.12.7",
     "@unocss/reset": "^0.59.4",
     "@unocss/transformer-directives": "^0.59.4",
@@ -33,6 +35,5 @@
     "unocss": "^0.59.4",
     "vite": "^5.2.0",
     "yaml": "^2.4.5"
-  },
-  "packageManager": "pnpm@8.15.8+sha512.d1a029e1a447ad90bc96cd58b0fad486d2993d531856396f7babf2d83eb1823bb83c5a3d0fc18f675b2d10321d49eb161fece36fe8134aa5823ecd215feed392"
+  }
 }
