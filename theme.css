@@ -128,6 +128,11 @@
   --tk-elements-navCard-borderColorHover: var(--vp-c-brand-1);
   --tk-elements-navCard-iconColorHover: var(--vp-c-brand-1);
 
+  --tk-elements-editPageLink-textColor: var(--vp-c-brand-1);
+  --tk-elements-editPageLink-textColorHover: var(--vp-c-brand-1);
+  --tk-elements-editPageLink-iconColor: var(--vp-c-brand-1);
+  --tk-elements-editPageLink-iconColorHover: var(--vp-c-brand-1);
+
   --tk-elements-editor-backgroundColor: var(--vp-c-bg);
   --tk-elements-editor-gutter-textColor: var(--vp-c-brand-1);
   --tk-elements-editor-gutter-backgroundColor: var(--vp-c-bg);
