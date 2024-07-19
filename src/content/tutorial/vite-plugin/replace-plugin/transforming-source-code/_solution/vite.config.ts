@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     replacePlugin({
       from: "Hello world",
-      to: "Replaced value",
-    }),
-  ],
+      to: "Replaced value"
+    })
+  ]
 });

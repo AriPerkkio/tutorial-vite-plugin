@@ -5,6 +5,6 @@ export default function vitePluginReplace() {
       if (id.includes("tutorial-example.js")) {
         return { code: "mountHTML('<h1>Changed!</h1>')" };
       }
-    },
+    }
   };
 }

@@ -13,7 +13,7 @@ export default defineConfig({
         if (id === "\0virtual:tutorial-env") {
           return "export default 'This should work 🤔'";
         }
-      },
-    },
-  ],
+      }
+    }
+  ]
 });

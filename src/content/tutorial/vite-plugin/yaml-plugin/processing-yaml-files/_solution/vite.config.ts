@@ -12,10 +12,10 @@ export default defineConfig({
           const yaml = parse(content);
 
           return {
-            code: `export default ${JSON.stringify(yaml)}`,
+            code: `export default ${JSON.stringify(yaml)}`
           };
         }
-      },
-    },
-  ],
+      }
+    }
+  ]
 });

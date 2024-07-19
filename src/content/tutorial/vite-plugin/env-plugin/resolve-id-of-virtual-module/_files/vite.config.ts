@@ -8,7 +8,7 @@ export default defineConfig({
         if (id === "virtual:tutorial-env") {
           return "export default 'This should work 🤔'";
         }
-      },
-    },
-  ],
+      }
+    }
+  ]
 });

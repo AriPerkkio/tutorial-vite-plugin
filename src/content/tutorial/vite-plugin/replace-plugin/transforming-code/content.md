@@ -28,7 +28,7 @@ Options are passed to the plugin as function argument.
 ```ts
 replacePlugin({
   from: "Initial value",
-  to: "Replaced value",
+  to: "Replaced value"
 });
 ```
 

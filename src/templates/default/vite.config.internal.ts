@@ -7,11 +7,11 @@ const loadedPlugins = viteConfig.plugins?.map(getName).filter(Boolean).join();
 export default mergeConfig(
   defineConfig({
     define: {
-      TUTORIAL_LOADED_VITE_PLUGINS: `"${loadedPlugins || "none"}"`,
+      TUTORIAL_LOADED_VITE_PLUGINS: `"${loadedPlugins || "none"}"`
     },
     build: {
-      target: "esnext",
-    },
+      target: "esnext"
+    }
   }),
   viteConfig
 );
