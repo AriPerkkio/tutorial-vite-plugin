@@ -14,9 +14,9 @@ export default defineConfig({
           const envVars = getTutorialEnvVariables();
           return `export default ${JSON.stringify(envVars)}`;
         }
-      },
-    },
-  ],
+      }
+    }
+  ]
 });
 
 function getTutorialEnvVariables() {

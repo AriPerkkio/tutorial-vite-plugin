@@ -5,6 +5,6 @@ export default function vitePluginReplace(options) {
       if (id.includes("tutorial-example.js")) {
         return { code: src.replaceAll(options.from, options.to) };
       }
-    },
+    }
   };
 }

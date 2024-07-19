@@ -24,7 +24,7 @@ The `yaml` variable now holds a Javascript object that represents our `content.y
 
 ```ts
 return {
-  code: `export default ${JSON.stringify(yaml)}`,
+  code: `export default ${JSON.stringify(yaml)}`
 };
 ```
 

@@ -25,9 +25,9 @@ Let's add a new plugin with the name `env-plugin`.
 export default defineConfig({
   plugins: [
     {
-      name: "env-plugin",
-    },
-  ],
+      name: "env-plugin"
+    }
+  ]
 });
 ```
 
