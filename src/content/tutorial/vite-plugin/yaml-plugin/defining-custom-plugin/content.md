@@ -1,17 +1,17 @@
 ---
 type: lesson
-title: Defining custom plugin
+title: Defining a custom plugin
 focus: /vite.config.ts
 ---
 
-# Defining custom plugin
+# Defining a custom plugin
 
-Plugins can have various properties that are listed in [Plugin API | Vite](https://vitejs.dev/guide/api-plugin.html) documentation. The only **required property** is `name`.
+A plugin is a plain object that defines hooks to modify the way Vite resolves ids, loads and transforms modules, and more. It can have various properties that are listed in the [Plugin API | Vite](https://vitejs.dev/guide/api-plugin.html) documentation. The only **required property** is `name`.
 
-Let's start by adding a custom plugin in our Vite configuration. To do this, add a new `plugins` property into the Vite configuration. The `plugins` should be an array.
+Let's start by adding a custom plugin in our Vite config file. To do this, add a new `plugins` array property in the exported config object.
 
-Inside the `plugins` array, define a new object with `name` `'yaml-plugin'`.
+Then, let's add a new object with `name` `'yaml-plugin'` inside the `plugins` array.
 
-Successfully defined plugin should be reported in the Preview tab:
+A successfully defined plugin should be reported in the Preview tab:
 
 > Loaded Vite plugins: yaml-plugin ✅

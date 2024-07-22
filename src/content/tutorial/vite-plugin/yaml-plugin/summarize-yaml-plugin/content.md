@@ -6,7 +6,7 @@ focus: /vite.config.ts
 
 # Summary
 
-Our custom Vite plugin can now intercept `*.yaml` file imports and convert them into Javascript.
+Our custom Vite plugin can now intercept `*.yaml` file imports and load them as JavaScript modules.
 
 Before you head on to create your own plugins for loading some other non-Javascript files, let's summarize what we've done:
 
@@ -25,3 +25,5 @@ Before you head on to create your own plugins for loading some other non-Javascr
 </ol>
 
 📚 Homework: Build a Vite plugin that can import [`.csv` files](https://en.wikipedia.org/wiki/Comma-separated_values) directly into Javascript. You can even build your own minimal CSV-parser!
+
+Tip: Before creating your own plugin, search for popular Vite or compatible Rollup plugins. For YAML support, you can directly add the official [@rollup/plugin-yaml](https://www.npmjs.com/package/@rollup/plugin-yaml) to your Vite config.

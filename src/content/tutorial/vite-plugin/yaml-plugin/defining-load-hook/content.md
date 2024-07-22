@@ -1,10 +1,10 @@
 ---
 type: lesson
-title: Defining load hook
+title: Defining the load hook
 focus: /vite.config.ts
 ---
 
-# Defining load hook
+# Defining the load hook
 
 Next we'll need to intercept loading of `.yaml` files. Let's start by adding a [`load`](https://rollupjs.org/plugin-development/#load) hook in our Vite plugin.
 
@@ -16,7 +16,7 @@ Next we'll need to intercept loading of `.yaml` files. Let's start by adding a [
 }
 ```
 
-Vite will call this hook with all the loaded files. As our plugin is only interested in `.yaml` files, we can check `id` for this extension.
+Vite will call the load hook of every plugin for each resolved id to the load the module code. A load hook can return custom code for an id, or skip it by to let other plugins handle it. As our plugin is only interested in `.yaml` files, we can check `id` for this extension. 
 
 ```js
 {
@@ -29,7 +29,7 @@ Vite will call this hook with all the loaded files. As our plugin is only intere
 }
 ```
 
-Our `load` function should return an object with `code` property. This property should contain the actual code that importing this specific `.yaml` file should produce. As we don't yet know how to convert `.yaml` files into Javascript, we can return something simpler here.
+Our `load` function should return an object with a `code` property for these ids. This property should contain the actual code that importing this specific `.yaml` file should produce. As we don't yet know how to convert `.yaml` files into JavaScript, let's return a simple module that exports a default string first:
 
 ```js
 {

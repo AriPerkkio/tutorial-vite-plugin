@@ -4,13 +4,13 @@ title: Importing YAML files
 focus: /index.js
 ---
 
-# Welcome to Vite Plugin tutorial
+# Welcome to the Vite Plugin API tutorial
 
-Hey there, and welcome to Vite Plugin tutorial&nbsp;👋!
+Hey there, and welcome to the Vite Plugin API tutorial&nbsp;👋!
 
-In this tutorial we'll go through steps for creating custom Vite plugins. We'll start by creating a custom Vite plugin for loading `.yaml` files.
+We'll create custom Vite plugins step by step, starting with a custom Vite plugin for loading `.yaml` files.
 
-Our goal is to be able to import `content.yaml` file in a Javascript file and use it as plain Javascript object.
+Our goal is to be able to import a `content.yaml` file in a module and use it as plain JavaScript object:
 
 ```js [index.js]
 import content from "./content.yaml";
@@ -19,7 +19,7 @@ console.log(content);
 // > [{  employees: [{ id: 1, ... }, ...], projects: [{ id: 101, ...}, ...] }]
 ```
 
-Try doing this in `index.js`:
+Starting with the content as a variable in `index.js`, try changing the code to import it from the YAML file instead:
 
 ```js [index.js] add={1} del={2}
 import content from "./content.yaml";
@@ -28,4 +28,4 @@ const content = ["Initial content"];
 export default content;
 ```
 
-At this point we should run into error when Vite fails to load `.yaml` file.&nbsp;❌
+We should run into an error when Vite fails to load `.yaml` file.&nbsp;❌
