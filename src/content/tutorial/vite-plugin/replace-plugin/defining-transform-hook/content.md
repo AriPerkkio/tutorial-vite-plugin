@@ -1,12 +1,12 @@
 ---
 type: lesson
-title: Defining transform hook
+title: The transform hook
 focus: /vite-plugin-replace.ts
 ---
 
-# Transform hook
+# the transform hook
 
-Modifying contents of a source code file is called **transforming** in Vite. To do this in a Vite plugin, we'll need to use `transform` hook.
+Modifying the contents of a source code file is called **transforming** in Vite. To transform a module in a Vite plugin, we'll need to use `transform` hook.
 
 ```ts add={3}
 {
@@ -15,9 +15,9 @@ Modifying contents of a source code file is called **transforming** in Vite. To 
 }
 ```
 
-This hooks is called with two options:
+This hook is called with two options:
 
-- `src` is the source code of the file, or the result of previous Vite plugin's transform
+- `code` is the source code of the file, or the result of previous Vite plugin's transform
 - `id` is the name of the module
 
 As return value Vite expects an object with various properties.
@@ -26,12 +26,12 @@ In this tutorial we'll skip most of them and focus only on `code` property. This
 ```ts
 {
   name: "replace-plugin",
-  transform(src, id) {
+  transform(code, id) {
     return { code: <transformed Javascript code> }
   }
 }
 ```
 
-In `tutorial-example.js` we have a helper function `mountHTML()`. It can be used to modify the page on preview tab. Try changing the contents of `tutorial-example.js` using `transform` hook so that `mountHTML` is called with `<h1>Changed!</h1>` instead.
+In `tutorial-example.js` we have a helper function `mountHTML()`. It can be used to modify the page on preview tab. Try changing the contents of `tutorial-example.js` using the `transform` hook so that `mountHTML` is called with `<h1>Changed!</h1>` instead.
 
-> 💡 Note that `transform` hook is called for every single file that Vite processes. Make sure to specifically transform only `tutorial-example.js`. This can be detected by checking `id` for matches exactly as we did with the `load` hook.
+> 💡 Note that the `transform` hook is called for every single module that Vite processes. Make sure to only transform `tutorial-example.js`. This can be detected by checking `id` for matches in the same way we did for the `load` hook in the previous chapter.
