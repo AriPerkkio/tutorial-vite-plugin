@@ -10,7 +10,7 @@ In this chapter we'll create a plugin that modifies loaded source code. This plu
 
 For example, when configured with `{ from: "Initial value", to: "Replaced value" }` this plugin should replace all occurrences of `"Initial value"` with `"Replaced value"`.
 
-The plugin will also be in a separate file from our `vite.config.ts`.
+The plugin will also be in a separate file from our `vite.config.ts`. Inlining plugins is ok for simple cases, but it is usual to abstract them using Plugin Constructors to keep our app configuration manageable as our plugins pipeline grows. These plugins can also be later packaged and published to npm to share them with other Vite users. You'll normally reach out for popular community plugins for common patterns, before building your own.
 
 ```
 ├── vite-plugin-replace.ts
