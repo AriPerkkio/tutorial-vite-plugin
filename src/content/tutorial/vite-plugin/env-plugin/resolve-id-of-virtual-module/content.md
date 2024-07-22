@@ -24,7 +24,7 @@ Vite internally resolve ids for each requested module using the `resolveId` hook
 }
 ```
 
-Next, we need prefix the resolved id using the special `\0` marker. Once `resolveId` is called for our virtual module's entry point, we'll return it with this prefix:
+Next, we need to prefix the resolved id using the special `\0` marker. Once `resolveId` is called for our virtual module's entry point, we'll return it with this prefix:
 
 ```ts
 {
