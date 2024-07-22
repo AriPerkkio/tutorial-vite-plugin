@@ -4,7 +4,7 @@ title: The transform hook
 focus: /vite-plugin-replace.ts
 ---
 
-# the transform hook
+# The transform hook
 
 Modifying the contents of a source code file is called **transforming** in Vite. To transform a module in a Vite plugin, we'll need to use `transform` hook.
 
