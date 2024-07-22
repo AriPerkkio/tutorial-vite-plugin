@@ -1,6 +1,6 @@
 ---
 type: lesson
-title: Env variables in load hook
+title: Env variables in the load hook
 focus: /vite.config.ts
 mainCommand: ""
 terminal:
@@ -9,11 +9,11 @@ terminal:
     - ["terminal", "Terminal"]
 ---
 
-# Env variables in load hook
+# Env variables in the load hook
 
-We are now able to intercept loading of the virtual module and have prevented other plugins from colliding with it.
+We are now able to intercept the loading of the virtual module and have prevented other plugins from colliding with it.
 
-Next we'll need to handle the actual environment variables. As environment variables are an easy way to expose secrets, let's allow our plugin to only expose variables that are prefixed with `TUTORIAL_`:
+Next, we'll need to handle the actual environment variables. As environment variables are an easy way to expose secrets, let's extend our plugin to only expose variables that are prefixed with `TUTORIAL_`:
 
 ```ts
 function getTutorialEnvVariables() {
@@ -42,7 +42,7 @@ load(id, options) {
 },
 ```
 
-Next let's open up the terminal and start Vite server while providing an environment variable:
+Next, let's open up the terminal and start Vite server while providing an environment variable:
 
 ```sh
 TUTORIAL_MY_MESSAGE="Hello world" npm run dev

@@ -1,14 +1,14 @@
 ---
 type: lesson
-title: Importing virtual module
+title: Importing a virtual module
 focus: /index.js
 ---
 
-# Importing virtual module
+# Importing a virtual module
 
 Now that we know how environment variables work, let's continue with our custom plugin!
 
-Add an import for the virtual module in `index.js`. At this point it should break our Vite setup but that's fine!
+Add an import for the virtual module in `index.js`. At this point, it should break our Vite setup but that's fine!
 
 ```ts add={1,2} del={3}
 import env from "virtual:tutorial-env";
@@ -31,7 +31,7 @@ export default defineConfig({
 });
 ```
 
-In the previous lessons we saw that a plugin can intercept module request in the `load()` hook. Let's try using the same trick here.
+In the previous chapter, we saw that a plugin can intercept module requests in the `load()` hook. Let's try using the same trick here.
 
 ```ts
 {
@@ -44,7 +44,7 @@ In the previous lessons we saw that a plugin can intercept module request in the
 },
 ```
 
-Even when we are handling the loading of the file, Vite keeps showing an error. Note how this error is thrown by another Vite plugin - Vite's internal `plugin:vite:import-analysis`.
+Even when we are handling the file loading, Vite keeps showing an error. Note how this error is thrown by another Vite plugin - Vite's internal `plugin:vite:import-analysis`.
 
 > [plugin:vite:import-analysis] Failed to resolve import "virtual:tutorial-env" from "index.js". Does the file exist?
 
