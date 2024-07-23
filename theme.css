@@ -11,6 +11,7 @@
   --vpt-bg-alt: #f6f6f7;
   --vpt-border: #c2c2c4;
   --vpt-text-1: rgba(60, 60, 67);
+  --vpt-preview-bg: #ffffff;
 }
 
 :root[data-theme="dark"] {
@@ -21,6 +22,7 @@
   --vpt-bg-alt: #161618;
   --vpt-border: #3c3f44;
   --vpt-text-1: rgba(255, 255, 245, 0.86);
+  --vpt-preview-bg: #242424;
 }
 
 :root {
@@ -72,5 +74,9 @@
     --code-background: var(--vpt-bg-alt);
     --code-background-color: var(--vpt-gray-soft);
     --code-color: var(--vpt-indigo-1);
+  }
+
+  iframe {
+    background-color: var(--vpt-preview-bg);
   }
 }
