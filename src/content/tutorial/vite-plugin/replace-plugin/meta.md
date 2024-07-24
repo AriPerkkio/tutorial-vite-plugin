@@ -6,5 +6,7 @@ lessons:
   - transforming-source-code
   - summarize-replace-plugin
 title: Replace Plugin
-template: replace-plugin
+template:
+  name: replace-plugin
+  visibleFiles: ["/tutorial-example.js"]
 ---
