@@ -54,6 +54,9 @@
   --tk-elements-navCard-borderColorHover: var(--vpt-indigo-1);
   --tk-elements-navCard-iconColorHover: var(--vpt-indigo-1);
 
+  --tk-elements-webcontainersLink-textColor: var(--vpt-indigo-1);
+  --tk-elements-webcontainersLink-textColorHover: var(--vpt-indigo-1);
+
   --tk-elements-editPageLink-textColor: var(--vpt-indigo-1);
   --tk-elements-editPageLink-textColorHover: var(--vpt-indigo-1);
   --tk-elements-editPageLink-iconColor: var(--vpt-indigo-1);
