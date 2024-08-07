@@ -54,10 +54,8 @@
   --tk-elements-navCard-borderColorHover: var(--vpt-indigo-1);
   --tk-elements-navCard-iconColorHover: var(--vpt-indigo-1);
 
-  --tk-elements-editPageLink-textColor: var(--vpt-indigo-1);
-  --tk-elements-editPageLink-textColorHover: var(--vpt-indigo-1);
-  --tk-elements-editPageLink-iconColor: var(--vpt-indigo-1);
-  --tk-elements-editPageLink-iconColorHover: var(--vpt-indigo-1);
+  --tk-elements-link-secondaryColor: var(--vpt-indigo-1);
+  --tk-elements-link-secondaryColorHover: var(--vpt-indigo-1);
 
   --tk-elements-editor-backgroundColor: var(--vpt-bg);
   --tk-elements-editor-gutter-textColor: var(--vpt-indigo-1);
