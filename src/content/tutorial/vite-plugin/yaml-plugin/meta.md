@@ -7,4 +7,7 @@ lessons:
   - processing-yaml-files
   - summarize-yaml-plugin
 title: YAML Plugin
+template:
+  name: default
+  visibleFiles: ["/content.yaml", "/index.js"]
 ---

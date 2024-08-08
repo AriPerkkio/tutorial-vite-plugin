@@ -2,6 +2,9 @@
 type: lesson
 title: Import plugin from file
 focus: /vite.config.ts
+template:
+  name: replace-plugin
+  visibleFiles: []
 ---
 
 # Vite Replace plugin
