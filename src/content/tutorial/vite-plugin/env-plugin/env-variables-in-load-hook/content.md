@@ -4,6 +4,7 @@ title: Env variables in the load hook
 focus: /vite.config.ts
 mainCommand: ""
 terminal:
+  open: true
   activePanel: 1
   panels:
     - ["terminal", "Terminal"]
@@ -42,7 +43,7 @@ load(id, options) {
 },
 ```
 
-Next, let's open up the terminal and start Vite server while providing an environment variable:
+Next, let's start Vite server from the terminal while providing an environment variable:
 
 ```sh
 TUTORIAL_MY_MESSAGE="Hello world" npm run dev
