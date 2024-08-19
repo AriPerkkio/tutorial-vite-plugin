@@ -1,5 +1,5 @@
 import { unoCSSConfig } from '@tutorialkit/astro';
-import { globSync, convertPathToPattern } from 'fast-glob';
+import { globSync } from 'fast-glob';
 import fs from 'node:fs/promises';
 import { basename, dirname, join } from 'node:path';
 import { defineConfig, presetIcons, presetUno, transformerDirectives } from 'unocss';
@@ -22,12 +22,16 @@ const customIconCollection = iconPaths.reduce(
 export default defineConfig({
   ...unoCSSConfig,
   content: {
-    inline: globSync([
-      `${convertPathToPattern(join(require.resolve('@tutorialkit/components-react'), '..'))}/**/*.js`,
-      `${convertPathToPattern(join(require.resolve('@tutorialkit/astro'), '..'))}/default/**/*.astro`,
-    ]).map((filePath) => {
-      return () => fs.readFile(filePath, { encoding: 'utf8' });
-    }),
+    pipeline: {
+      include: [
+        // default
+        /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+
+        // our tutorialkit packages
+        "**/@tutorialkit/astro/default/**/*.astro",
+        "**/@tutorialkit/components-react/**/*.js"
+      ]
+    }
   },
   transformers: [transformerDirectives()],
   presets: [
