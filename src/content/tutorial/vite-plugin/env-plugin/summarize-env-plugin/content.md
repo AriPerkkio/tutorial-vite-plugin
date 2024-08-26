@@ -4,6 +4,7 @@ title: Summary
 focus: /vite.config.ts
 mainCommand: ""
 terminal:
+  open: true
   activePanel: 1
   panels:
     - ["terminal", "Terminal"]
