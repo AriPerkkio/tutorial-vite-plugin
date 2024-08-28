@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@tutorialkit/components-react':
-    specifier: ^0.1.6
-    version: 0.1.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.38)(react-dom@18.3.1)(vite@5.3.1)
+  '@tutorialkit/react':
+    specifier: ^0.2.0
+    version: 0.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.38)(react-dom@18.3.1)(vite@5.3.1)
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -22,36 +22,21 @@ devDependencies:
   '@astrojs/react':
     specifier: ^3.3.4
     version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.3.1)
-  '@iconify-json/ph':
-    specifier: ^1.1.12
-    version: 1.1.13
-  '@iconify-json/svg-spinners':
-    specifier: ^1.1.2
-    version: 1.1.2
   '@tutorialkit/astro':
-    specifier: ^0.1.6
-    version: 0.1.6(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1)
+    specifier: ^0.2.0
+    version: 0.2.0(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1)
   '@tutorialkit/theme':
-    specifier: ^0.1.6
-    version: 0.1.6(postcss@8.4.38)(vite@5.3.1)
+    specifier: ^0.2.0
+    version: 0.2.0(postcss@8.4.38)(vite@5.3.1)
   '@tutorialkit/types':
-    specifier: ^0.1.6
-    version: 0.1.6
+    specifier: ^0.2.0
+    version: 0.2.0
   '@types/node':
     specifier: ^20.12.7
     version: 20.14.5
-  '@unocss/reset':
-    specifier: ^0.59.4
-    version: 0.59.4
-  '@unocss/transformer-directives':
-    specifier: ^0.59.4
-    version: 0.59.4
   astro:
     specifier: ^4.8.6
     version: 4.10.3(@types/node@20.14.5)(typescript@5.4.5)
-  fast-glob:
-    specifier: ^3.3.2
-    version: 3.3.2
   prettier:
     specifier: ^3.3.3
     version: 3.3.3
@@ -61,9 +46,6 @@ devDependencies:
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
-  unocss:
-    specifier: ^0.59.4
-    version: 0.59.4(postcss@8.4.38)(vite@5.3.1)
   vite:
     specifier: ^5.2.0
     version: 5.3.1(@types/node@20.14.5)
@@ -1004,13 +986,11 @@ packages:
     resolution: {integrity: sha512-xtM4JJ63HCKj09WRqrBswXiHrpliBlqboWSZH8odcmqYXbvIFceU9/Til4V+MQr6+MoUC+KB72cxhky2+A6r/g==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: true
 
   /@iconify-json/svg-spinners@1.1.2:
     resolution: {integrity: sha512-Aab6SqkORaTJ1W+ooufn6C8BsBitrn3uk8iRQLPA6pjhyvQAhkKCGMctyXIL5ZjrycnoFVsZ4mx7KnwEMra8qg==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1741,8 +1721,8 @@ packages:
     resolution: {integrity: sha512-DFQGANNkEZRzFk1/rDP6TcFdM82ycHE+zfl9C/M/jXlH68jiqHWHFMQURLELoD8koxvu/eW5uhg94NSAZlYrUQ==}
     dev: true
 
-  /@tutorialkit/astro@0.1.6(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1):
-    resolution: {integrity: sha512-tdOP3ga+9tHDcerj8d0gGrvAQkiABHeJuY5+tpGspsYCVcrj5FoqoEyyxs3LmAslqf+GKYqddEnesQkSkZNkwA==}
+  /@tutorialkit/astro@0.2.0(@types/react-dom@18.3.0)(astro@4.10.3)(postcss@8.4.38)(vite@5.3.1):
+    resolution: {integrity: sha512-Xx8u+xLtBk2n9yN5GtmChDXKS02HnVWB8iMZpwMRUKNUaANy0hQVBBEMXBzlnk4rWn4Tbcyl7/i1ulzdxegMPA==}
     peerDependencies:
       astro: ^4.12.0
     dependencies:
@@ -1752,11 +1732,12 @@ packages:
       '@expressive-code/plugin-line-numbers': 0.35.3
       '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
       '@stackblitz/sdk': 1.11.0
-      '@tutorialkit/components-react': 0.1.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.38)(react-dom@18.3.1)(vite@5.3.1)
-      '@tutorialkit/runtime': 0.1.6
-      '@tutorialkit/theme': 0.1.6(postcss@8.4.38)(vite@5.3.1)
-      '@tutorialkit/types': 0.1.6
+      '@tutorialkit/react': 0.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.38)(react-dom@18.3.1)(vite@5.3.1)
+      '@tutorialkit/runtime': 0.2.0
+      '@tutorialkit/theme': 0.2.0(postcss@8.4.38)(vite@5.3.1)
+      '@tutorialkit/types': 0.2.0
       '@types/react': 18.3.3
+      '@unocss/reset': 0.62.3
       '@webcontainer/api': 1.2.0
       astro: 4.10.3(@types/node@20.14.5)(typescript@5.4.5)
       astro-expressive-code: 0.35.3(astro@4.10.3)
@@ -1785,8 +1766,8 @@ packages:
       - vite
     dev: true
 
-  /@tutorialkit/components-react@0.1.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.38)(react-dom@18.3.1)(vite@5.3.1):
-    resolution: {integrity: sha512-8/A60Wo2D80nsKKF3/Cl5V6VBoOlVnMKqunOWj6Wuii1JAFOj9nGXA5M8KjNnWNLGjlhNNJb0CL62Qe5fBI6Gg==}
+  /@tutorialkit/react@0.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.38)(react-dom@18.3.1)(vite@5.3.1):
+    resolution: {integrity: sha512-EHhwpZdTohjCT5fukDlgeK7rVYuQQIz5gqa2s8E6Ky8lSKCMFuUOdY++dgIXyGUso8ukAICExM9oA+Lkulb9hw==}
     dependencies:
       '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
       '@codemirror/commands': 6.6.0
@@ -1808,8 +1789,8 @@ packages:
       '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
       '@radix-ui/react-accordion': 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
       '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0)(@codemirror/lang-css@6.2.1)(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
-      '@tutorialkit/runtime': 0.1.6
-      '@tutorialkit/theme': 0.1.6(postcss@8.4.38)(vite@5.3.1)
+      '@tutorialkit/runtime': 0.2.0
+      '@tutorialkit/theme': 0.2.0(postcss@8.4.38)(vite@5.3.1)
       '@webcontainer/api': 1.2.0
       '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
       '@xterm/addon-web-links': 0.11.0(@xterm/xterm@5.5.0)
@@ -1830,16 +1811,19 @@ packages:
       - supports-color
       - vite
 
-  /@tutorialkit/runtime@0.1.6:
-    resolution: {integrity: sha512-sTjQdfHwadbXwVFZOFn/apgXUtKQ8mK2IBHS2CeLyGAys1SDDSbekRLyFTHcj3F0r9UEX/OHFxvUuc4bQGVmCg==}
+  /@tutorialkit/runtime@0.2.0:
+    resolution: {integrity: sha512-ffTiMXTlaIB4CBmxzD65h1+Ys12UlSgxMsl/1Uk+r0Rw0m5e2E1jl6qrwi6wiovW/6jUaQ4mncKZn4amsn9SBw==}
     dependencies:
-      '@tutorialkit/types': 0.1.6
+      '@tutorialkit/types': 0.2.0
       '@webcontainer/api': 1.2.0
       nanostores: 0.10.3
 
-  /@tutorialkit/theme@0.1.6(postcss@8.4.38)(vite@5.3.1):
-    resolution: {integrity: sha512-Pk5wsxE74AIIBF4vzobxgx/JmBgeAuBu0frHQAM+ja/Ma31aaT7wVssCqkYakK4JJug3oD8FSYqpf5ww7N0V9w==}
+  /@tutorialkit/theme@0.2.0(postcss@8.4.38)(vite@5.3.1):
+    resolution: {integrity: sha512-0MkCcOy/0sMIl1v5u+Kg8Z8zig1APru3Opj5RoCQTwUXrHlRo69hozKBpDqae8Ik6sJah6vLjGD7vB5J3cF8AQ==}
     dependencies:
+      '@iconify-json/ph': 1.1.13
+      '@iconify-json/svg-spinners': 1.1.2
+      fast-glob: 3.3.2
       unocss: 0.59.4(postcss@8.4.38)(vite@5.3.1)
     transitivePeerDependencies:
       - '@unocss/webpack'
@@ -1848,8 +1832,8 @@ packages:
       - supports-color
       - vite
 
-  /@tutorialkit/types@0.1.6:
-    resolution: {integrity: sha512-iJZCS06cs4UNNF7E7x8WZIR8WW1uihix5l7n0tDs85NEItEnT3PpbZKL3RqmQlwZ1iUPKqHTvjnzu4ItF+BS0w==}
+  /@tutorialkit/types@0.2.0:
+    resolution: {integrity: sha512-CjLascBPahuBwVBHH5kVAfDMV1GPNtUr9DnXXG5FtA45qp1wpAQRLL7K5HRRf7ADjYuKuUqMjkgc/vBFA1+apg==}
     dependencies:
       zod: 3.23.8
 
@@ -2098,6 +2082,10 @@ packages:
 
   /@unocss/reset@0.59.4:
     resolution: {integrity: sha512-Upy4xzdWl4RChbLAXBq1BoR4WqxXMoIfjvtcwSZcZK2sylXCFAseSWnyzJFdSiXPqNfmMuNgPXgiSxiQB+cmNA==}
+
+  /@unocss/reset@0.62.3:
+    resolution: {integrity: sha512-XVKPkbm8y9SGzRaG3x+HygGZURm50MvKLVHXsbxi67RbIir9Ouyt9hQTV6Xs3RicRZFWOpJx3wMRb8iKUOe5Zw==}
+    dev: true
 
   /@unocss/rule-utils@0.59.4:
     resolution: {integrity: sha512-1qoLJlBWAkS4D4sg73990S1MT7E8E5md/YhopKjTQuEC9SyeVmEg+5pR/Xd8xhPKMqbcuBPl/DS8b6l/GQO56A==}

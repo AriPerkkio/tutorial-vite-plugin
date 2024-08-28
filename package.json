@@ -14,27 +14,21 @@
     "format": "prettier src --write"
   },
   "dependencies": {
-    "@tutorialkit/components-react": "^0.1.6",
+    "@tutorialkit/react": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/react": "^3.3.4",
-    "@iconify-json/ph": "^1.1.12",
-    "@iconify-json/svg-spinners": "^1.1.2",
-    "@tutorialkit/astro": "^0.1.6",
-    "@tutorialkit/theme": "^0.1.6",
-    "@tutorialkit/types": "^0.1.6",
+    "@tutorialkit/astro": "^0.2.0",
+    "@tutorialkit/theme": "^0.2.0",
+    "@tutorialkit/types": "^0.2.0",
     "@types/node": "^20.12.7",
-    "@unocss/reset": "^0.59.4",
-    "@unocss/transformer-directives": "^0.59.4",
     "astro": "^4.8.6",
-    "fast-glob": "^3.3.2",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.4.5",
-    "unocss": "^0.59.4",
     "vite": "^5.2.0",
     "yaml": "^2.4.5"
   },
