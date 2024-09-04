@@ -3,6 +3,7 @@ type: lesson
 title: Env variables in the load hook
 focus: /vite.config.ts
 mainCommand: ""
+previews: []
 terminal:
   open: true
   activePanel: 1
