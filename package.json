@@ -14,16 +14,16 @@
     "format": "prettier src --write"
   },
   "dependencies": {
-    "@tutorialkit/react": "^0.2.2",
+    "@tutorialkit/react": "https://pkg.pr.new/@tutorialkit/react@1eb41fd",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/react": "^3.3.4",
-    "@tutorialkit/astro": "^0.2.2",
-    "@tutorialkit/theme": "^0.2.2",
-    "@tutorialkit/types": "^0.2.2",
+    "@tutorialkit/astro": "https://pkg.pr.new/@tutorialkit/astro@1eb41fd",
+    "@tutorialkit/theme": "https://pkg.pr.new/@tutorialkit/theme@1eb41fd",
+    "@tutorialkit/types": "https://pkg.pr.new/@tutorialkit/types@1eb41fd",
     "@types/node": "^20.12.7",
     "astro": "^4.15.0",
     "prettier": "^3.3.3",
