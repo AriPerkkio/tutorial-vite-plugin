@@ -14,16 +14,16 @@
     "format": "prettier src --write"
   },
   "dependencies": {
-    "@tutorialkit/react": "^0.2.2",
+    "@tutorialkit/react": "^0.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/react": "^3.3.4",
-    "@tutorialkit/astro": "^0.2.2",
-    "@tutorialkit/theme": "^0.2.2",
-    "@tutorialkit/types": "^0.2.2",
+    "@tutorialkit/astro": "^0.2.3",
+    "@tutorialkit/theme": "^0.2.3",
+    "@tutorialkit/types": "^0.2.3",
     "@types/node": "^20.12.7",
     "astro": "^4.15.0",
     "prettier": "^3.3.3",
