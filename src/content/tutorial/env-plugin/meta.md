@@ -1,5 +1,5 @@
 ---
-type: chapter
+type: part
 lessons:
   - env-vars-in-node
   - importing-virtual-module
