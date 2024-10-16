@@ -1,5 +1,5 @@
 ---
-type: chapter
+type: part
 lessons:
   - importing-yaml-files
   - defining-custom-plugin
