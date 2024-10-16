@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tutorialkit/react':
-    specifier: ^1.0.0
-    version: 1.0.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)
+    specifier: https://pkg.pr.new/@tutorialkit/react@0af3848
+    version: '@pkg.pr.new/@tutorialkit/react@0af3848(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)'
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -23,14 +23,14 @@ devDependencies:
     specifier: ^3.3.4
     version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.3.1)
   '@tutorialkit/astro':
-    specifier: ^1.0.0
-    version: 1.0.0(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1)
+    specifier: https://pkg.pr.new/@tutorialkit/astro@0af3848
+    version: '@pkg.pr.new/@tutorialkit/astro@0af3848(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1)'
   '@tutorialkit/theme':
-    specifier: ^1.0.0
-    version: 1.0.0(postcss@8.4.41)(vite@5.3.1)
+    specifier: https://pkg.pr.new/@tutorialkit/theme@0af3848
+    version: '@pkg.pr.new/@tutorialkit/theme@0af3848(postcss@8.4.41)(vite@5.3.1)'
   '@tutorialkit/types':
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: https://pkg.pr.new/@tutorialkit/types@0af3848
+    version: '@pkg.pr.new/@tutorialkit/types@0af3848'
   '@types/node':
     specifier: ^20.12.7
     version: 20.14.5
@@ -2315,125 +2315,6 @@ packages:
   /@stackblitz/sdk@1.11.0:
     resolution: {integrity: sha512-DFQGANNkEZRzFk1/rDP6TcFdM82ycHE+zfl9C/M/jXlH68jiqHWHFMQURLELoD8koxvu/eW5uhg94NSAZlYrUQ==}
     dev: true
-
-  /@tutorialkit/astro@1.0.0(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1):
-    resolution: {integrity: sha512-7O9cLmpMfsyMBqf/Sen8v95eKJJe+QXC670mp572sq48SdQ38sfmX0RbyzspO8o3aIZxryDsx4XXQhu5ecQugw==}
-    peerDependencies:
-      astro: ^4.15.0
-    dependencies:
-      '@astrojs/mdx': 3.1.1(astro@4.15.1)
-      '@astrojs/react': 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.3.1)
-      '@expressive-code/plugin-collapsible-sections': 0.35.3
-      '@expressive-code/plugin-line-numbers': 0.35.3
-      '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
-      '@stackblitz/sdk': 1.11.0
-      '@tutorialkit/react': 1.0.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)
-      '@tutorialkit/runtime': 1.0.0
-      '@tutorialkit/theme': 1.0.0(postcss@8.4.41)(vite@5.3.1)
-      '@tutorialkit/types': 1.0.0
-      '@types/react': 18.3.3
-      '@unocss/reset': 0.62.3
-      '@webcontainer/api': 1.2.4
-      astro: 4.15.1(@types/node@20.14.5)(typescript@5.4.5)
-      astro-expressive-code: 0.35.3(astro@4.15.1)
-      chokidar: 3.6.0
-      fast-glob: 3.3.2
-      front-matter: 4.0.2
-      hastscript: 9.0.0
-      kleur: 4.1.5
-      mdast-util-directive: 3.0.0
-      mdast-util-to-markdown: 2.1.0
-      nanostores: 0.10.3
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      remark-directive: 3.0.0
-      unified: 11.0.5
-      unist-util-visit: 5.0.0
-      unocss: 0.59.4(postcss@8.4.41)(vite@5.3.1)
-      zod: 3.23.8
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - '@types/react-dom'
-      - '@unocss/webpack'
-      - postcss
-      - rollup
-      - supports-color
-      - vite
-    dev: true
-
-  /@tutorialkit/react@1.0.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1):
-    resolution: {integrity: sha512-1An/A3iu2ThBHyFQsYAl20HLQBN4/Qr6ro8BmcuC52u3djbD5XiNiX6m/9XWpXlnHEVWhrFnU6FyqLUTNHnoUA==}
-    dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
-      '@codemirror/commands': 6.6.0
-      '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.1)
-      '@codemirror/lang-html': 6.4.9
-      '@codemirror/lang-javascript': 6.2.2
-      '@codemirror/lang-json': 6.0.1
-      '@codemirror/lang-markdown': 6.2.5
-      '@codemirror/lang-sass': 6.0.2(@codemirror/view@6.28.1)
-      '@codemirror/lang-vue': 0.1.3
-      '@codemirror/lang-wast': 6.0.2
-      '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
-      '@codemirror/view': 6.28.1
-      '@lezer/common': 1.2.1
-      '@lezer/highlight': 1.2.0
-      '@lezer/javascript': 1.4.17
-      '@lezer/lr': 1.4.1
-      '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
-      '@radix-ui/react-accordion': 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-context-menu': 2.2.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-dialog': 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
-      '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0)(@codemirror/lang-css@6.2.1)(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
-      '@tutorialkit/runtime': 1.0.0
-      '@tutorialkit/theme': 1.0.0(postcss@8.4.41)(vite@5.3.1)
-      '@webcontainer/api': 1.2.4
-      '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
-      '@xterm/addon-web-links': 0.11.0(@xterm/xterm@5.5.0)
-      '@xterm/xterm': 5.5.0
-      codemirror: 6.0.1(@lezer/common@1.2.1)
-      framer-motion: 11.2.14(react-dom@18.3.1)(react@18.3.1)
-      nanostores: 0.10.3
-      picomatch: 4.0.2
-      react: 18.3.1
-      react-resizable-panels: 2.0.19(react-dom@18.3.1)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - '@types/react'
-      - '@types/react-dom'
-      - '@unocss/webpack'
-      - postcss
-      - react-dom
-      - rollup
-      - supports-color
-      - vite
-
-  /@tutorialkit/runtime@1.0.0:
-    resolution: {integrity: sha512-zYZBetgGGicSpnfB0LIS5hnRdSjTdAFBdwVsTLkBuJ14tcU/TOYqF/hwlmMRn0ZxZir0VWXqXPo2MfqAWfUaVw==}
-    dependencies:
-      '@tutorialkit/types': 1.0.0
-      '@webcontainer/api': 1.2.4
-      nanostores: 0.10.3
-
-  /@tutorialkit/theme@1.0.0(postcss@8.4.41)(vite@5.3.1):
-    resolution: {integrity: sha512-v2FECefuuezw41w1vQx4UfeV3LH1v6q4YrlouhPtIEikdCX8WkboRw/chv13W8yguM32aJuXAMNnsAlfY5QUsg==}
-    dependencies:
-      '@iconify-json/ph': 1.1.13
-      '@iconify-json/svg-spinners': 1.1.2
-      fast-glob: 3.3.2
-      unocss: 0.59.4(postcss@8.4.41)(vite@5.3.1)
-    transitivePeerDependencies:
-      - '@unocss/webpack'
-      - postcss
-      - rollup
-      - supports-color
-      - vite
-
-  /@tutorialkit/types@1.0.0:
-    resolution: {integrity: sha512-o9+LXAcQgdzI3WERfOVOF+EEdPROsbz6fmwkeQBsvYIfA+E9C86zihc2wCjXzaHer6/dX+sUvjfd453gnpFNtg==}
-    dependencies:
-      zod: 3.23.8
 
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -6382,3 +6263,214 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
+
+  '@pkg.pr.new/@tutorialkit/astro@0af3848(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1)':
+    resolution: {tarball: https://pkg.pr.new/@tutorialkit/astro@0af3848}
+    id: '@pkg.pr.new/@tutorialkit/astro@0af3848'
+    name: '@tutorialkit/astro'
+    version: 1.0.0
+    peerDependencies:
+      astro: ^4.15.0
+    dependencies:
+      '@astrojs/mdx': 3.1.1(astro@4.15.1)
+      '@astrojs/react': 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.3.1)
+      '@expressive-code/plugin-collapsible-sections': 0.35.3
+      '@expressive-code/plugin-line-numbers': 0.35.3
+      '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
+      '@stackblitz/sdk': 1.11.0
+      '@tutorialkit/react': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/react@0af3848(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)'
+      '@tutorialkit/runtime': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/runtime@0af3848'
+      '@tutorialkit/theme': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/theme@0af3848(postcss@8.4.41)(vite@5.3.1)'
+      '@tutorialkit/types': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/types@0af3848'
+      '@types/react': 18.3.3
+      '@unocss/reset': 0.62.3
+      '@webcontainer/api': 1.2.4
+      astro: 4.15.1(@types/node@20.14.5)(typescript@5.4.5)
+      astro-expressive-code: 0.35.3(astro@4.15.1)
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      front-matter: 4.0.2
+      hastscript: 9.0.0
+      kleur: 4.1.5
+      mdast-util-directive: 3.0.0
+      mdast-util-to-markdown: 2.1.0
+      nanostores: 0.10.3
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      remark-directive: 3.0.0
+      unified: 11.0.5
+      unist-util-visit: 5.0.0
+      unocss: 0.59.4(postcss@8.4.41)(vite@5.3.1)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react-dom'
+      - '@unocss/webpack'
+      - postcss
+      - rollup
+      - supports-color
+      - vite
+    dev: true
+
+  '@pkg.pr.new/@tutorialkit/react@0af3848(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)':
+    resolution: {tarball: https://pkg.pr.new/@tutorialkit/react@0af3848}
+    id: '@pkg.pr.new/@tutorialkit/react@0af3848'
+    name: '@tutorialkit/react'
+    version: 1.0.0
+    dependencies:
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
+      '@codemirror/commands': 6.6.0
+      '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.1)
+      '@codemirror/lang-html': 6.4.9
+      '@codemirror/lang-javascript': 6.2.2
+      '@codemirror/lang-json': 6.0.1
+      '@codemirror/lang-markdown': 6.2.5
+      '@codemirror/lang-sass': 6.0.2(@codemirror/view@6.28.1)
+      '@codemirror/lang-vue': 0.1.3
+      '@codemirror/lang-wast': 6.0.2
+      '@codemirror/language': 6.10.2
+      '@codemirror/state': 6.4.1
+      '@codemirror/view': 6.28.1
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/javascript': 1.4.17
+      '@lezer/lr': 1.4.1
+      '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
+      '@radix-ui/react-accordion': 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-context-menu': 2.2.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-dialog': 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
+      '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0)(@codemirror/lang-css@6.2.1)(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
+      '@tutorialkit/runtime': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/runtime@0af3848'
+      '@tutorialkit/theme': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/theme@0af3848(postcss@8.4.41)(vite@5.3.1)'
+      '@webcontainer/api': 1.2.4
+      '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
+      '@xterm/addon-web-links': 0.11.0(@xterm/xterm@5.5.0)
+      '@xterm/xterm': 5.5.0
+      codemirror: 6.0.1(@lezer/common@1.2.1)
+      framer-motion: 11.2.14(react-dom@18.3.1)(react@18.3.1)
+      nanostores: 0.10.3
+      picomatch: 4.0.2
+      react: 18.3.1
+      react-resizable-panels: 2.0.19(react-dom@18.3.1)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react'
+      - '@types/react-dom'
+      - '@unocss/webpack'
+      - postcss
+      - react-dom
+      - rollup
+      - supports-color
+      - vite
+    dev: false
+
+  '@pkg.pr.new/@tutorialkit/theme@0af3848(postcss@8.4.41)(vite@5.3.1)':
+    resolution: {tarball: https://pkg.pr.new/@tutorialkit/theme@0af3848}
+    id: '@pkg.pr.new/@tutorialkit/theme@0af3848'
+    name: '@tutorialkit/theme'
+    version: 1.0.0
+    dependencies:
+      '@iconify-json/ph': 1.1.13
+      '@iconify-json/svg-spinners': 1.1.2
+      fast-glob: 3.3.2
+      unocss: 0.59.4(postcss@8.4.41)(vite@5.3.1)
+    transitivePeerDependencies:
+      - '@unocss/webpack'
+      - postcss
+      - rollup
+      - supports-color
+      - vite
+    dev: true
+
+  '@pkg.pr.new/@tutorialkit/types@0af3848':
+    resolution: {tarball: https://pkg.pr.new/@tutorialkit/types@0af3848}
+    name: '@tutorialkit/types'
+    version: 1.0.0
+    dependencies:
+      zod: 3.23.8
+    dev: true
+
+  '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/react@0af3848(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)':
+    resolution: {tarball: https://pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/react@0af3848}
+    id: '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/react@0af3848'
+    name: '@tutorialkit/react'
+    version: 1.0.0
+    dependencies:
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
+      '@codemirror/commands': 6.6.0
+      '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.1)
+      '@codemirror/lang-html': 6.4.9
+      '@codemirror/lang-javascript': 6.2.2
+      '@codemirror/lang-json': 6.0.1
+      '@codemirror/lang-markdown': 6.2.5
+      '@codemirror/lang-sass': 6.0.2(@codemirror/view@6.28.1)
+      '@codemirror/lang-vue': 0.1.3
+      '@codemirror/lang-wast': 6.0.2
+      '@codemirror/language': 6.10.2
+      '@codemirror/state': 6.4.1
+      '@codemirror/view': 6.28.1
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/javascript': 1.4.17
+      '@lezer/lr': 1.4.1
+      '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
+      '@radix-ui/react-accordion': 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-context-menu': 2.2.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-dialog': 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
+      '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0)(@codemirror/lang-css@6.2.1)(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
+      '@tutorialkit/runtime': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/runtime@0af3848'
+      '@tutorialkit/theme': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/theme@0af3848(postcss@8.4.41)(vite@5.3.1)'
+      '@webcontainer/api': 1.2.4
+      '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
+      '@xterm/addon-web-links': 0.11.0(@xterm/xterm@5.5.0)
+      '@xterm/xterm': 5.5.0
+      codemirror: 6.0.1(@lezer/common@1.2.1)
+      framer-motion: 11.2.14(react-dom@18.3.1)(react@18.3.1)
+      nanostores: 0.10.3
+      picomatch: 4.0.2
+      react: 18.3.1
+      react-resizable-panels: 2.0.19(react-dom@18.3.1)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react'
+      - '@types/react-dom'
+      - '@unocss/webpack'
+      - postcss
+      - react-dom
+      - rollup
+      - supports-color
+      - vite
+    dev: true
+
+  '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/runtime@0af3848':
+    resolution: {tarball: https://pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/runtime@0af3848}
+    name: '@tutorialkit/runtime'
+    version: 1.0.0
+    dependencies:
+      '@tutorialkit/types': '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/types@0af3848'
+      '@webcontainer/api': 1.2.4
+      nanostores: 0.10.3
+
+  '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/theme@0af3848(postcss@8.4.41)(vite@5.3.1)':
+    resolution: {tarball: https://pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/theme@0af3848}
+    id: '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/theme@0af3848'
+    name: '@tutorialkit/theme'
+    version: 1.0.0
+    dependencies:
+      '@iconify-json/ph': 1.1.13
+      '@iconify-json/svg-spinners': 1.1.2
+      fast-glob: 3.3.2
+      unocss: 0.59.4(postcss@8.4.41)(vite@5.3.1)
+    transitivePeerDependencies:
+      - '@unocss/webpack'
+      - postcss
+      - rollup
+      - supports-color
+      - vite
+
+  '@pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/types@0af3848':
+    resolution: {tarball: https://pkg.pr.new/stackblitz/tutorialkit/@tutorialkit/types@0af3848}
+    name: '@tutorialkit/types'
+    version: 1.0.0
+    dependencies:
+      zod: 3.23.8
