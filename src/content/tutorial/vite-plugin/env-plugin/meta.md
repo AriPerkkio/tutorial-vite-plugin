@@ -7,5 +7,7 @@ lessons:
   - env-variables-in-load-hook
   - summarize-env-plugin
 title: Env Plugin
-template: env-plugin
+template:
+  name: env-plugin
+  visibleFiles: [index.js]
 ---

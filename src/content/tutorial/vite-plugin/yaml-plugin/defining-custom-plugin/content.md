@@ -2,6 +2,9 @@
 type: lesson
 title: Defining a custom plugin
 focus: /vite.config.ts
+template:
+  name: default
+  visibleFiles: ["/content.yaml", "/index.js", "vite.config.ts"]
 ---
 
 # Defining a custom plugin
