@@ -1,5 +1,5 @@
 ---
-type: chapter
+type: part
 lessons:
   - transforming-code
   - defining-transform-hook

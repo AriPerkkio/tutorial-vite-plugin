@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tutorialkit/react':
-    specifier: ^1.2.0
-    version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)
+    specifier: 1.3.0
+    version: 1.3.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -23,14 +23,14 @@ devDependencies:
     specifier: ^3.3.4
     version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.3.1)
   '@tutorialkit/astro':
-    specifier: ^1.2.0
-    version: 1.2.0(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1)
+    specifier: 1.3.0
+    version: 1.3.0(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1)
   '@tutorialkit/theme':
-    specifier: ^1.2.0
-    version: 1.2.0(postcss@8.4.41)(vite@5.3.1)
+    specifier: 1.3.0
+    version: 1.3.0(postcss@8.4.41)(vite@5.3.1)
   '@tutorialkit/types':
-    specifier: ^1.2.0
-    version: 1.2.0
+    specifier: 1.3.0
+    version: 1.3.0
   '@types/node':
     specifier: ^20.12.7
     version: 20.14.5
@@ -2316,8 +2316,8 @@ packages:
     resolution: {integrity: sha512-DFQGANNkEZRzFk1/rDP6TcFdM82ycHE+zfl9C/M/jXlH68jiqHWHFMQURLELoD8koxvu/eW5uhg94NSAZlYrUQ==}
     dev: true
 
-  /@tutorialkit/astro@1.2.0(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1):
-    resolution: {integrity: sha512-gLKo20/MunqjdqYgmb1GwABIUJcf7/Y2QPnPQF2qsQ1g5ZLRysbiViHPzBkemmv+B2Y9t2flncKZFN/hRp93Qw==}
+  /@tutorialkit/astro@1.3.0(@types/react-dom@18.3.0)(astro@4.15.1)(postcss@8.4.41)(vite@5.3.1):
+    resolution: {integrity: sha512-5kThHa4ESKyNlp+jJY/ZxHacyXwIrqZmmyDj4RN2ACsm8FDB2NMqkwC0xghmYM2bvafPhSyvbv1QElZArB87yw==}
     peerDependencies:
       astro: ^4.15.0
     dependencies:
@@ -2327,13 +2327,13 @@ packages:
       '@expressive-code/plugin-line-numbers': 0.35.3
       '@nanostores/react': 0.7.2(nanostores@0.10.3)(react@18.3.1)
       '@stackblitz/sdk': 1.11.0
-      '@tutorialkit/react': 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)
-      '@tutorialkit/runtime': 1.2.0
-      '@tutorialkit/theme': 1.2.0(postcss@8.4.41)(vite@5.3.1)
-      '@tutorialkit/types': 1.2.0
+      '@tutorialkit/react': 1.3.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1)
+      '@tutorialkit/runtime': 1.3.0
+      '@tutorialkit/theme': 1.3.0(postcss@8.4.41)(vite@5.3.1)
+      '@tutorialkit/types': 1.3.0
       '@types/react': 18.3.3
       '@unocss/reset': 0.62.3
-      '@webcontainer/api': 1.2.4
+      '@webcontainer/api': 1.5.1
       astro: 4.15.1(@types/node@20.14.5)(typescript@5.4.5)
       astro-expressive-code: 0.35.3(astro@4.15.1)
       chokidar: 3.6.0
@@ -2361,8 +2361,8 @@ packages:
       - vite
     dev: true
 
-  /@tutorialkit/react@1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1):
-    resolution: {integrity: sha512-bcEX6VI+5BHf7RjfAAJ0gDieiEsVFohiU4L0BjGBm7W7wy5KSOeVwvBk8OtxjRDWfwFyUigkKeANS420ndHyzg==}
+  /@tutorialkit/react@1.3.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(postcss@8.4.41)(react-dom@18.3.1)(vite@5.3.1):
+    resolution: {integrity: sha512-0rsPEoNWZ1GalP6EcAH4wFKEhp0+481IVOzuF/4OIjkliztk5TPU+HytDBRyH6Y5t/7rLFL3P+dWRnWstDnXKQ==}
     dependencies:
       '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
       '@codemirror/commands': 6.6.0
@@ -2386,9 +2386,9 @@ packages:
       '@radix-ui/react-context-menu': 2.2.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
       '@radix-ui/react-dialog': 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
       '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0)(@codemirror/lang-css@6.2.1)(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
-      '@tutorialkit/runtime': 1.2.0
-      '@tutorialkit/theme': 1.2.0(postcss@8.4.41)(vite@5.3.1)
-      '@webcontainer/api': 1.2.4
+      '@tutorialkit/runtime': 1.3.0
+      '@tutorialkit/theme': 1.3.0(postcss@8.4.41)(vite@5.3.1)
+      '@webcontainer/api': 1.5.1
       '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
       '@xterm/addon-web-links': 0.11.0(@xterm/xterm@5.5.0)
       '@xterm/xterm': 5.5.0
@@ -2409,16 +2409,16 @@ packages:
       - supports-color
       - vite
 
-  /@tutorialkit/runtime@1.2.0:
-    resolution: {integrity: sha512-SEKoDbq1ICPMcQztOF5mOueOzYiIRHNNkoiJ5sSgLvDVQZWOh+dELbnO312Dq/3ThUlrGGOaJF8ctKqShnJ1wg==}
+  /@tutorialkit/runtime@1.3.0:
+    resolution: {integrity: sha512-Z5V9f4v7HDjweqUns/XoLkyXCQ1VtLgCJbqp6OUIW90972pVFbbJaFLREFaPm50CVaUM2vGEWhscc05fK3ZFhw==}
     dependencies:
-      '@tutorialkit/types': 1.2.0
-      '@webcontainer/api': 1.2.4
+      '@tutorialkit/types': 1.3.0
+      '@webcontainer/api': 1.5.1
       nanostores: 0.10.3
       picomatch: 4.0.2
 
-  /@tutorialkit/theme@1.2.0(postcss@8.4.41)(vite@5.3.1):
-    resolution: {integrity: sha512-zwYWoC8+9IruCZK3swWd96JIvVQeTojnnrB2jANqxP6dL8c6Dw1i3a1Xy/oQjYvMfrgWHAWQr2FncSsrmPc6Ag==}
+  /@tutorialkit/theme@1.3.0(postcss@8.4.41)(vite@5.3.1):
+    resolution: {integrity: sha512-h4FHRqIsxnwnrlGfym3VNaXNnNk9txlEPmW4Xf8UXFXLI104/UIPTbLJFRN5i+pZNgu/Dr4PIK/DAUvBlycqwQ==}
     dependencies:
       '@iconify-json/ph': 1.1.13
       '@iconify-json/svg-spinners': 1.1.2
@@ -2431,8 +2431,8 @@ packages:
       - supports-color
       - vite
 
-  /@tutorialkit/types@1.2.0:
-    resolution: {integrity: sha512-LRv5MgBZWnjNxpJCKmBgosiuSfOimiyh6BDEEs3T4qaNTBdKkvSQXTXJA4d48NcvA1JqwBY6Ab58M+ecU4zhVA==}
+  /@tutorialkit/types@1.3.0:
+    resolution: {integrity: sha512-odi5sgT6NLupkQV/EuTtsYR93KeP9PxoJYw2T1cX0H3urUz5Cx3XdtxSEGc4be1dSn196sRjdkIEC/l064Z3cw==}
     dependencies:
       zod: 3.23.8
 
@@ -2845,8 +2845,8 @@ packages:
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
     dev: true
 
-  /@webcontainer/api@1.2.4:
-    resolution: {integrity: sha512-vV42eKuat5QGz7agFJupT5sZj0CHOj/gg6J3/HanvgOVETt7gupzR+iuVNHwudS3yuW+x78Ai7T6fwvV7uBThQ==}
+  /@webcontainer/api@1.5.1:
+    resolution: {integrity: sha512-+ELk+TbTOUx0LawAUdB+nnxaofg/FxUXo/Ac/+CzHSP3SOc3ebBAW3fLo4UZfvJdUW+ygWZOiQMthPLQXvKZEg==}
 
   /@xterm/addon-fit@0.10.0(@xterm/xterm@5.5.0):
     resolution: {integrity: sha512-UFYkDm4HUahf2lnEyHvio51TNGiLK66mqP2JoATy7hRZeXaGMRDr00JiSF7m63vR5WKATF605yEggJKsw0JpMQ==}
@@ -4962,7 +4962,7 @@ packages:
       nlcst-to-string: 4.0.0
       unist-util-modify-children: 4.0.0
       unist-util-visit-children: 3.0.0
-      vfile: 6.0.1
+      vfile: 6.0.3
     dev: true
 
   /parse5@7.1.2:
@@ -5310,7 +5310,7 @@ packages:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-to-markdown: 2.1.0
-      unified: 11.0.4
+      unified: 11.0.5
     dev: true
 
   /request-light@0.7.0:
@@ -5995,7 +5995,7 @@ packages:
     resolution: {integrity: sha512-NXPYyxyBSH7zB5U6+3uDdd6Nybz6o6/od9rk8bp9H8GR3L+cm/fC0uUTbqBmUTnMCUDslAGBOIKNfvvb+gGlDg==}
     dependencies:
       '@types/unist': 3.0.2
-      vfile: 6.0.1
+      vfile: 6.0.3
     dev: true
 
   /vfile-message@3.1.4:
