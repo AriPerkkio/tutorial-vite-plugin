@@ -11,4 +11,6 @@ editPageLink: https://github.com/AriPerkkio/tutorial-vite-plugin/blob/main/src/c
 i18n:
   partTemplate: ${title}
 downloadAsZip: true
+meta:
+  image: "https://tutorialkit.dev/tutorialkit-opengraph.png"
 ---
